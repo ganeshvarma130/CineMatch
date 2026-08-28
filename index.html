@@ -922,6 +922,33 @@ button{cursor:pointer}
   }
 }
 
+/* USER RATING */
+
+.user-rating {
+    margin-top: 20px;
+}
+
+.user-rating-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.rating-stars {
+    display: flex;
+    gap: 6px;
+}
+
+.rating-stars span {
+    font-size: 28px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.rating-stars span:hover {
+    transform: scale(1.2);
+}
+
 </style>
 </head>
 <body>
@@ -1832,7 +1859,26 @@ document.getElementById("modalRoot").innerHTML=`<div class="modal-overlay" id="o
   <span>·</span><span>${m.type}</span></div>
 <div class="tag-row" style="justify-content:center;margin-bottom:16px">${m.genre.map(g=>`<span class="genre-tag">${g}</span>`).join("")}</div>
 <div class="modal-desc">${m.description}</div>
-<div class="modal-actions"><button class="btn btn-sm btn-outline" id="modalFav">${fav(m)?"❤️ Saved":"🤍 Save"}</button></div>
+
+<div class="user-rating">
+  <div class="user-rating-title">⭐ Your Rating</div>
+
+  <div class="rating-stars">
+    <span>☆</span>
+    <span>☆</span>
+    <span>☆</span>
+    <span>☆</span>
+    <span>☆</span>
+  </div>
+</div>
+
+<div class="rating-value"></div>
+
+<div class="modal-actions">
+  <button class="btn btn-sm btn-outline" id="modalFav">
+    ${fav(m)?"❤️ Saved":"🤍 Save"}
+  </button>
+</div>
 <div class="divider" style="margin:24px 0 16px"></div>
 <div style="font-size:.8rem;font-weight:600;color:var(--text-dim);margin-bottom:12px;letter-spacing:1px;text-transform:uppercase">You might also like</div>
 <div class="reco-scroll">${similar(m,6).map(x=>`<div class="reco-mini-card" data-open="${x.id}">
@@ -1843,6 +1889,16 @@ document.getElementById("overlay").onclick=()=>document.getElementById("modalRoo
 document.getElementById("closeModal").onclick=()=>document.getElementById("modalRoot").innerHTML="";
 document.getElementById("modalFav").onclick=()=>{toggleFav(m);openModal(m.id)};
 document.querySelectorAll("#modalRoot [data-open]").forEach(x=>x.onclick=()=>openModal(x.dataset.open));
+
+const stars = document.querySelectorAll('.rating-stars span');
+
+stars.forEach((star, index) => {
+    star.addEventListener('click', () => {
+        stars.forEach((s, i) => {
+            s.textContent = i <= index ? '★' : '☆';
+        });
+    });
+});
 }
 function homeSearch(){
 let q=document.getElementById("heroSearch").value.trim().toLowerCase(),p=document.getElementById("searchPanel");if(!q){p.innerHTML="";return;}
