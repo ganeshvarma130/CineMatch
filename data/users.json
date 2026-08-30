@@ -1,0 +1,45 @@
+{
+  "user_fot2w12g1kgmtfe77bd": {
+    "id": "user_fot2w12g1kgmtfe77bd",
+    "profile": {
+      "name": "Ganesh Varma",
+      "email": "gvarma1304@gmail.com",
+      "phone": "7780403578"
+    },
+    "favorites": [
+      30,
+      27,
+      67,
+      71,
+      32
+    ],
+    "ratings": {
+      "5": 5,
+      "18": 5,
+      "23": 5,
+      "30": 3,
+      "32": 5,
+      "40": 4,
+      "41": 5,
+      "42": 5,
+      "43": 5,
+      "44": 5,
+      "47": 3,
+      "53": 5,
+      "55": 5,
+      "73": 5
+    },
+    "createdAt": "2026-08-30T06:16:05.305Z"
+  },
+  "nonexistent_user_12345": {
+    "id": "nonexistent_user_12345",
+    "profile": {
+      "name": "",
+      "email": "",
+      "phone": ""
+    },
+    "favorites": [],
+    "ratings": {},
+    "createdAt": "2026-08-30T08:45:54.436Z"
+  }
+}

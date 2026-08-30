@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CineMatch</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+<nav class="sidebar">
+  <div class="sidebar-logo"><div class="logo-text">CineMatch</div><div class="logo-sub">Designed by <br> Ganesh Varma
+  </div></div>
+  <div class="nav-links">
+    <div class="nav-item active" data-page="home"><span class="nav-icon">🏠</span>Home</div>
+    <div class="nav-item" data-page="movies"><span class="nav-icon">🎬</span>Movies</div>
+    <div class="nav-item" data-page="anime"><span class="nav-icon">⚡</span>Anime</div>
+    <div class="nav-item" data-page="favorites"><span class="nav-icon">❤️</span>Favorites <span class="nav-badge" id="favBadge" style="display:none">0</span></div>
+    <div class="nav-item" data-page="profile"><span class="nav-icon">👤</span>Profile</div>
+  </div>
+  <div class="sidebar-bottom">gvarma1304@gmail.com</div>
+</nav>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<main class="main">
+
+  <div class="topbar">
+
+  <button class="mobile-menu-btn" id="mobileMenuBtn">
+    ☰
+  </button>
+
+  <div class="topbar-title" id="topbarTitle">
+    🏠 Home
+  </div>
+
+  <div class="topbar-right">
+    <div class="avatar" id="topAvatar">?</div>
+  </div>
+
+</div>
+  <div id="appContent"></div>
+</main>
+</div>
+<div id="modalRoot"></div>
+<script src="api.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
