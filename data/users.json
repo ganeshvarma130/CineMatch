@@ -41,5 +41,21 @@
     "favorites": [],
     "ratings": {},
     "createdAt": "2026-08-30T08:45:54.436Z"
+  },
+  "user_irgfuz26recmtfpnedf": {
+    "id": "user_irgfuz26recmtfpnedf",
+    "profile": {
+      "name": "Madara Uchiha",
+      "email": "madarauchiha56@gmail.com",
+      "phone": "6301234569"
+    },
+    "favorites": [
+      17
+    ],
+    "ratings": {
+      "4": 4,
+      "5": 5
+    },
+    "createdAt": "2026-08-30T11:12:57.111Z"
   }
 }

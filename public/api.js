@@ -9,7 +9,7 @@
 //    await API.user.saveProfile({ name, email, phone });
 // ═════════════════════════════════════════════
 
-const API_BASE = "http://localhost:3000/api";
+const API_BASE = "/api";
 
 // ── userId ────────────────────────────────────
 // We generate one UUID per browser and store it
