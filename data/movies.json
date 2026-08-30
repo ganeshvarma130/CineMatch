@@ -918,11 +918,11 @@
     "id": 76,
     "title": "Geethanjali",
     "type": "movie",
-    "year": 1985,
+    "year": 1987,
     "rating": 7,
     "genre": [],
-    "description": "Geethanjali is a 1985 Tamil Indian feature film directed by K.Rangaraj. The film stars Murali, Sathyaraj and Nalini in the lead roles.",
-    "poster": "https://image.tmdb.org/t/p/w500/egxFJwa38EaShrDgQnLhv5qDSJw.jpg"
+    "description": "Geethanjali is a tragicomedy romance about two terminally ill people who discover love and hope together.",
+    "poster":"https://pin.it/6mv8zmgBE"
   },
   {
     "id": 77,
@@ -942,14 +942,14 @@
     "id": 78,
     "title": "Hello Brother",
     "type": "movie",
-    "year": 1999,
-    "rating": 5.6,
+    "year": 1994,
+    "rating": 7.4,
     "genre": [
       "Comedy",
       "Romance"
     ],
-    "description": "A ghost seeking revenge for his death haunts the man who received his heart in a transplant.",
-    "poster": "https://image.tmdb.org/t/p/w500/edwYmD9YUs6gMPEkNOA78f28pwM.jpg"
+    "description":"Hello Brother is a comedy action-thriller about twin brothers with matching physical reflexes who accidentally reunite to fight a local gangster.",
+    "poster": "https://pin.it/4M5FEFMoK"
   },
   {
     "id": 79,
@@ -1103,16 +1103,17 @@
   },
   {
     "id": 90,
-    "title": "Jersey Boys",
+    "title": "Jersey",
     "type": "movie",
-    "year": 2014,
-    "rating": 6.8,
+    "year": 2019,
+    "rating": 8.5,
     "genre": [
-      "Music",
+      "Sports",
+      "Romance",
       "Drama"
     ],
-    "description": "A musical biopic of the Four Seasons—the rise, the tough times and personal clashes, and the ultimate triumph of a group of friends whose music became symbolic of a generation. Far from a mere tribute concert, it gets to the heart of the relationships at the centre of the group, with a special focus on frontman Frankie Valli, the small kid with the big falsetto.",
-    "poster": "https://image.tmdb.org/t/p/w500/kz956Y83YtT6vTyg0Q40mzRe2UM.jpg"
+    "description":"Jersey is an emotional sports drama about a failed, mid-30s cricketer who restarts his career to fulfill his son's wish.",
+    "poster": "https://pin.it/6xEKV8K7N"
   },
   {
     "id": 91,
@@ -1200,29 +1201,30 @@
   },
   {
     "id": 97,
-    "title": "Strange Darling",
+    "title": "Darling",
     "type": "movie",
-    "year": 2024,
-    "rating": 6.9,
+    "year": "2010",
+    "rating": 7.4,
     "genre": [
-      "Horror",
-      "Thriller"
+      "Romantic",
+      "Action",
+      "Comedy"
     ],
-    "description": "Nothing is what it seems when a twisted one-night stand spirals into a serial killer’s vicious murder spree.",
-    "poster": "https://image.tmdb.org/t/p/w500/kWNCRgt3ocv19bYO0sk7TRuZuFY.jpg"
+    "description": "Darling is a romantic comedy where Prabha creates a fake childhood love story to escape a forced marriage, leading to real complications.",
+    "poster": "https://pin.it/1CDeGJ3EG"
   },
   {
     "id": 98,
     "title": "Eeshwar",
     "type": "movie",
-    "year": 1989,
+    "year": 2002,
     "rating": 7,
     "genre": [
       "Drama",
       "Family"
     ],
-    "description": "Ishwar is a simple-minded and honest young man, devout and religious, he cares for everybody. He meets with a young widow with a son and marries her. This story is about him and his trials and triumphs.",
-    "poster": "https://image.tmdb.org/t/p/w500/oHpahU36IRBwLsdXrCCAQCO9SVc.jpg"
+    "description": "Eeswar is an action drama marking Prabhas's acting debut, following a rebellious slum youth fighting for his love and family.",
+    "poster":"https://pin.it/s1xFgbrKf"
   },
   {
     "id": 99,
@@ -1249,20 +1251,20 @@
       "Action"
     ],
     "description": "Sivaji and his family are uprooted from their community in Sri Lanka and wind up as bonded labourers in Vishakhapatnam. Like his legendary namesake, he rises up to become the saviour of the oppressed.",
-    "poster": "https://image.tmdb.org/t/p/w500/f9SjU4lj4jraX9WBYZAasbc79GX.jpg"
+    "poster": "https://pin.it/1jdcFSEJr"
   },
   {
     "id": 101,
     "title": "Billa",
     "type": "movie",
-    "year": 2012,
-    "rating": 5.8,
+    "year": 2009,
+    "rating": 6.2,
     "genre": [
       "Action",
       "Crime"
     ],
     "description": "Small-time diamond smuggler David befriends Goa-based gangster Abbasi. But when David begins to build inroads with an international gangster, Abbasi is not happy, and soon the two turn into bitter rivals.",
-    "poster": "https://image.tmdb.org/t/p/w500/gADzX6C4pGHneBoU148LXFMDyMr.jpg"
+    "poster": "https://pin.it/7rDKm5DXl"
   },
   {
     "id": 102,
