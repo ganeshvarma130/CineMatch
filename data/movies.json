@@ -1,68 +1,2007 @@
 [
-  { "id": 1,  "title": "Inception",                               "genre": ["Sci-Fi","Thriller"],                    "year": 2010, "rating": 8.8, "poster": "posters/inception.jpg",           "description": "A thief who steals corporate secrets through dream-sharing technology is given the inverse task of planting an idea.", "type": "movie" },
-  { "id": 2,  "title": "Interstellar",                            "genre": ["Sci-Fi","Drama"],                       "year": 2014, "rating": 8.6, "poster": "posters/interstellar.jpg",        "description": "A team of explorers travel through a wormhole in space.", "type": "movie" },
-  { "id": 3,  "title": "The Matrix",                              "genre": ["Sci-Fi","Action"],                      "year": 1999, "rating": 8.7, "poster": "posters/matrix.jpg",             "description": "A hacker discovers reality is a simulation.", "type": "movie" },
-  { "id": 4,  "title": "Avengers Endgame",                        "genre": ["Action","Sci-Fi"],                      "year": 2019, "rating": 8.4, "poster": "posters/avengersendgame.jpg",    "description": "The Avengers assemble for one final battle.", "type": "movie" },
-  { "id": 5,  "title": "The Dark Knight",                         "genre": ["Action","Thriller"],                    "year": 2008, "rating": 9.0, "poster": "posters/thedarkknight.jpg",      "description": "Batman faces the Joker in Gotham City.", "type": "movie" },
-  { "id": 6,  "title": "One Punch Man",                           "genre": ["Action","Comedy","Superhero"],          "year": 2015, "rating": 8.4, "poster": "posters/onepunchman.jpg",        "description": "A hero who can defeat any opponent with a single punch searches for a worthy challenge.", "type": "anime" },
-  { "id": 7,  "title": "Naruto Shippuden",                        "genre": ["Action","Adventure","Fantasy"],         "year": 2007, "rating": 8.7, "poster": "posters/narutoshippuden.jpg",    "description": "Naruto Uzumaki continues his journey as a young ninja.", "type": "anime" },
-  { "id": 8,  "title": "Dune",                                    "genre": ["Sci-Fi","Drama"],                       "year": 2021, "rating": 8.0, "poster": "posters/dune.jpg",               "description": "A noble family becomes embroiled in a war for a desert planet.", "type": "movie" },
-  { "id": 9,  "title": "Everything Everywhere",                   "genre": ["Sci-Fi","Comedy"],                      "year": 2022, "rating": 7.8, "poster": "posters/everything.jpg",         "description": "A woman discovers she must connect with parallel universe versions of herself.", "type": "movie" },
-  { "id": 11, "title": "Spirited Away",                           "genre": ["Animation","Fantasy"],                  "year": 2001, "rating": 8.6, "poster": "posters/miyazaki.jpg",           "description": "A girl finds herself in a strange spirit world.", "type": "anime" },
-  { "id": 13, "title": "Your Name",                               "genre": ["Animation","Romance"],                  "year": 2016, "rating": 8.4, "poster": "posters/yourname.jpg",           "description": "Two teenagers share a strange connection after a comet.", "type": "anime" },
-  { "id": 14, "title": "Demon Slayer",                            "genre": ["Animation","Action"],                   "year": 2019, "rating": 8.7, "poster": "posters/demonslayer.jpg",        "description": "A boy trains to become a demon slayer to save his sister.", "type": "anime" },
-  { "id": 15, "title": "Attack on Titan",                         "genre": ["Animation","Action"],                   "year": 2013, "rating": 9.0, "poster": "posters/attackontitan.jpg",      "description": "Humanity battles giant humanoid titans.", "type": "anime" },
-  { "id": 16, "title": "My Neighbor Totoro",                      "genre": ["Animation","Family"],                   "year": 1988, "rating": 8.2, "poster": "posters/myneighbourtotoro.jpg",  "description": "Two sisters meet friendly forest spirits.", "type": "anime" },
-  { "id": 17, "title": "Howl's Moving Castle",                    "genre": ["Animation","Fantasy"],                  "year": 2004, "rating": 8.2, "poster": "posters/howl'smovingcastle.jpg", "description": "A young woman is cursed by a witch and seeks a wizard.", "type": "anime" },
-  { "id": 18, "title": "Akira",                                   "genre": ["Animation","Sci-Fi"],                   "year": 1988, "rating": 8.0, "poster": "posters/akira.jpg",              "description": "A biker gang member discovers a child with telekinetic powers.", "type": "anime" },
-  { "id": 19, "title": "Blade Runner 2049",                       "genre": ["Sci-Fi","Drama"],                       "year": 2017, "rating": 8.0, "poster": "posters/bladerunner.jpg",        "description": "A young blade runner discovers a secret that could change society.", "type": "movie" },
-  { "id": 20, "title": "Oppenheimer",                             "genre": ["Drama","Historical"],                   "year": 2023, "rating": 8.9, "poster": "posters/oppenheimer.jpg",        "description": "The story of J. Robert Oppenheimer and the atomic bomb.", "type": "movie" },
-  { "id": 21, "title": "Tenet",                                   "genre": ["Action","Sci-Fi"],                      "year": 2020, "rating": 7.4, "poster": "posters/tenet.jpg",              "description": "A secret agent manipulates time to prevent World War III.", "type": "movie" },
-  { "id": 23, "title": "Joker",                                   "genre": ["Crime","Drama"],                        "year": 2019, "rating": 8.4, "poster": "posters/joker.jpg",              "description": "The origin story of the iconic DC supervillain.", "type": "movie" },
-  { "id": 25, "title": "Neon Genesis Evangelion",                 "genre": ["Animation","Sci-Fi"],                   "year": 1995, "rating": 8.5, "poster": "posters/evangelion.jpg",         "description": "Young pilots battle giant creatures threatening humanity.", "type": "anime" },
-  { "id": 26, "title": "Death Note",                              "genre": ["Animation","Thriller"],                 "year": 2006, "rating": 9.0, "poster": "posters/deathnote.jpg",          "description": "A high school student finds a notebook that can kill anyone.", "type": "anime" },
-  { "id": 27, "title": "Fullmetal Alchemist",                     "genre": ["Animation","Action"],                   "year": 2009, "rating": 9.1, "poster": "posters/fma.jpg",                "description": "Two brothers search for the philosopher's stone.", "type": "anime" },
-  { "id": 28, "title": "Naruto",                                  "genre": ["Animation","Action"],                   "year": 2002, "rating": 8.3, "poster": "posters/naruto.jpg",             "description": "A young ninja dreams of becoming the hokage.", "type": "anime" },
-  { "id": 29, "title": "Avatar",                                  "genre": ["Sci-Fi","Action"],                      "year": 2009, "rating": 7.8, "poster": "posters/avatar.jpg",             "description": "A marine on an alien world becomes involved in a conflict between humans and the native population.", "type": "movie" },
-  { "id": 30, "title": "The Shawshank Redemption",                "genre": ["Drama","Crime"],                        "year": 1994, "rating": 9.3, "poster": "posters/shawshankredemption.jpg","description": "A banker sentenced to life builds an unexpected friendship and keeps hope alive.", "type": "movie" },
-  { "id": 31, "title": "Fight Club",                              "genre": ["Drama","Thriller"],                     "year": 1999, "rating": 8.8, "poster": "posters/fightclub.jpg",          "description": "An unhappy office worker forms an underground fight club that grows beyond his control.", "type": "movie" },
-  { "id": 32, "title": "The Godfather",                           "genre": ["Crime","Drama"],                        "year": 1972, "rating": 9.2, "poster": "posters/godfather.jpg",          "description": "The aging patriarch of a powerful crime family transfers control to his reluctant son.", "type": "movie" },
-  { "id": 33, "title": "Jojo's Bizarre Adventure: Phantom Blood", "genre": ["Action","Adventure"],                   "year": 2012, "rating": 7.7, "poster": "posters/phantomblood.jpg",       "description": "Jonathan Joestar's peaceful life is shattered when Dio Brando enters his family.", "type": "anime" },
-  { "id": 34, "title": "The Prestige",                            "genre": ["Drama","Thriller"],                     "year": 2006, "rating": 8.5, "poster": "posters/prestige.jpg",           "description": "Two rival magicians become obsessed with creating the ultimate illusion.", "type": "movie" },
-  { "id": 35, "title": "One Piece",                               "genre": ["Animation","Action"],                   "year": 1999, "rating": 9.0, "poster": "posters/one piece.jpg",          "description": "Monkey D. Luffy and his crew sail across the Grand Line searching for the legendary One Piece.", "type": "anime" },
-  { "id": 36, "title": "Jujutsu Kaisen",                          "genre": ["Animation","Action"],                   "year": 2020, "rating": 8.6, "poster": "posters/jjk.jpg",                "description": "A teenager joins a secret organization of sorcerers after becoming involved with a cursed object.", "type": "anime" },
-  { "id": 37, "title": "My Hero Academia",                        "genre": ["Animation","Action"],                   "year": 2016, "rating": 8.0, "poster": "posters/myheroacademia.jpg",     "description": "A boy born without superpowers dreams of becoming a hero in a world full of superhuman abilities.", "type": "anime" },
-  { "id": 38, "title": "Tokyo Ghoul",                             "genre": ["Animation","Horror"],                   "year": 2014, "rating": 7.7, "poster": "posters/tokyoghoul.jpg",         "description": "A college student becomes half-ghoul and must learn to survive between two worlds.", "type": "anime" },
-  { "id": 39, "title": "Hunter x Hunter",                         "genre": ["Animation","Action"],                   "year": 2011, "rating": 9.0, "poster": "posters/hunterxhunter.jpg",      "description": "A young boy becomes a Hunter while searching for his missing father.", "type": "anime" },
-  { "id": 40, "title": "Code Geass",                              "genre": ["Animation","Action"],                   "year": 2006, "rating": 8.7, "poster": "posters/codegeass.jpg",          "description": "A mysterious power gives a young prince the ability to command others as he seeks to overthrow an empire.", "type": "anime" },
-  { "id": 41, "title": "Baahubali: The Beginning",                "genre": ["Action","Drama","Fantasy"],             "year": 2015, "rating": 8.0, "poster": "posters/bahubali.jpg",           "description": "A young man discovers his royal heritage and becomes involved in a struggle against the tyrant ruling the kingdom of Mahishmati.", "type": "movie" },
-  { "id": 42, "title": "Baahubali: The Conclusion",               "genre": ["Action","Drama","Fantasy"],             "year": 2017, "rating": 8.2, "poster": "posters/bahubali2.jpg",          "description": "Amarendra Baahubali's life and relationships are threatened when his brother plots to seize the throne.", "type": "movie" },
-  { "id": 43, "title": "Salaar",                                  "genre": ["Action","Crime","Drama"],               "year": 2023, "rating": 6.7, "poster": "posters/salaar.jpg",             "description": "A powerful warrior is drawn into a violent struggle over a contested kingdom and an old friendship.", "type": "movie" },
-  { "id": 44, "title": "RRR",                                     "genre": ["Action","Adventure","Drama"],           "year": 2022, "rating": 7.8, "poster": "posters/rrr.jpg",                "description": "Two legendary revolutionaries form an unexpected friendship while fighting against British rule in pre-independent India.", "type": "movie" },
-  { "id": 45, "title": "Irumudi",                                  "genre": ["Drama","Action"],                       "year": 2026, "rating": 7.5, "poster": "posters/irumudi.jpg",            "description": "An emotional social drama centered around a father and his daughter.", "type": "movie" },
-  { "id": 46, "title": "Pushpa: The Rise",                        "genre": ["Action","Crime","Drama"],               "year": 2021, "rating": 7.6, "poster": "posters/pushpa.jpg",             "description": "A labourer rises through the ranks of a red sandalwood smuggling syndicate.", "type": "movie" },
-  { "id": 47, "title": "Pushpa 2: The Rule",                      "genre": ["Action","Crime","Drama"],               "year": 2024, "rating": 6.1, "poster": "posters/pushpa2.jpg",            "description": "Pushpa faces powerful rivals and political challenges as he expands his influence.", "type": "movie" },
-  { "id": 48, "title": "Peddi",                                   "genre": ["Action","Drama","Sports"],              "year": 2026, "rating": 0.0, "poster": "posters/peddi.jpg",              "description": "A sports drama centered around a powerful rural character shaped by ambition and conflict.", "type": "movie" },
-  { "id": 49, "title": "Rao Bahadur",                             "genre": ["Drama","Thriller"],                     "year": 2026, "rating": 0.0, "poster": "posters/raobahadur.jpg",         "description": "A psychological drama set against a fading aristocratic world, blending suspense and magical realism.", "type": "movie" },
-  { "id": 50, "title": "Kalki 2898 AD",                           "genre": ["Sci-Fi","Action","Fantasy"],            "year": 2024, "rating": 7.0, "poster": "posters/kalki.jpg",              "description": "In a futuristic world, a pregnant woman is protected by an immortal warrior while powerful forces hunt her.", "type": "movie" },
-  { "id": 51, "title": "Hi Nanna",                                "genre": ["Drama","Romance","Family"],             "year": 2023, "rating": 8.3, "poster": "posters/hinanna.jpg",            "description": "A single father begins telling his daughter the story of her missing mother.", "type": "movie" },
-  { "id": 52, "title": "They Call Him OG",                        "genre": ["Action","Crime","Drama"],               "year": 2025, "rating": 0.0, "poster": "posters/og.jpg",                "description": "A retired gangster returns to Bombay after years away and confronts a powerful rival from his past.", "type": "movie" },
-  { "id": 53, "title": "Rangasthalam",                            "genre": ["Drama","Action","Thriller"],            "year": 2018, "rating": 8.2, "poster": "posters/rangasthalam.jpg",       "description": "A partially deaf villager and his brother challenge a corrupt village president.", "type": "movie" },
-  { "id": 54, "title": "Saripodhaa Sanivaaram",                   "genre": ["Action","Thriller","Drama"],            "year": 2024, "rating": 6.8, "poster": "posters/saripodhasanivaram.jpg", "description": "A man who controls his anger throughout the week unleashes his fury on Saturdays.", "type": "movie" },
-  { "id": 55, "title": "Eega",                                    "genre": ["Action","Comedy","Fantasy"],            "year": 2012, "rating": 7.7, "poster": "posters/eega.jpg",               "description": "After being murdered, a man is reincarnated as a housefly and sets out to avenge his death.", "type": "movie" },
-  { "id": 56, "title": "Little Hearts",                           "genre": ["Comedy","Romance"],                     "year": 2025, "rating": 7.6, "poster": "posters/littlehearts.jpg",       "description": "After failing his entrance exam, a young man joins a coaching centre where he meets a girl.", "type": "movie" },
-  { "id": 57, "title": "Bleach",                                  "genre": ["Action","Adventure","Supernatural"],   "year": 2004, "rating": 8.2, "poster": "posters/bleach.jpg",              "description": "Ichigo Kurosaki gains the powers of a Soul Reaper and must protect the living world.", "type": "anime" },
-  { "id": 58, "title": "Bleach: Thousand-Year Blood War",         "genre": ["Action","Adventure","Supernatural"],   "year": 2022, "rating": 9.0, "poster": "posters/tybw.jpg",               "description": "Ichigo and the Soul Reapers face a devastating war against the Quincy army.", "type": "anime" },
-  { "id": 59, "title": "Black Clover",                            "genre": ["Action","Adventure","Fantasy"],        "year": 2017, "rating": 8.2, "poster": "posters/blackclover.jpg",         "description": "Asta, a boy born without magic, trains relentlessly to become the greatest Magic Knight.", "type": "anime" },
-  { "id": 60, "title": "Dragon Ball Z",                           "genre": ["Action","Adventure","Fantasy"],        "year": 1989, "rating": 8.8, "poster": "posters/dragonballz.jpg",         "description": "Goku and his allies defend Earth from powerful warriors and villains.", "type": "anime" },
-  { "id": 61, "title": "Chainsaw Man",                            "genre": ["Action","Horror","Supernatural"],      "year": 2022, "rating": 8.4, "poster": "posters/chainsawman.jpg",         "description": "After being betrayed and killed, a young devil hunter merges with his pet devil.", "type": "anime" },
-  { "id": 62, "title": "Solo Leveling",                           "genre": ["Action","Fantasy","Adventure"],        "year": 2024, "rating": 8.8, "poster": "posters/sololevelling.jpg",       "description": "A weak hunter gains a mysterious ability that allows him to level up on his own.", "type": "anime" },
-  { "id": 63, "title": "Steins;Gate",                             "genre": ["Sci-Fi","Thriller","Drama"],           "year": 2011, "rating": 9.0, "poster": "posters/steinsgate.jpg",          "description": "A group of friends discovers a way to send messages into the past.", "type": "anime" },
-  { "id": 64, "title": "Your Lie in April",                       "genre": ["Drama","Romance","Music"],             "year": 2014, "rating": 8.6, "poster": "posters/yourlieinapril.jpg",     "description": "A gifted pianist who has lost his ability to hear music meets a spirited violinist.", "type": "anime" },
-  { "id": 65, "title": "Vinland Saga",                            "genre": ["Action","Adventure","Historical"],     "year": 2019, "rating": 8.8, "poster": "posters/vinlandsaga.jpg",         "description": "A young Viking warrior joins a mercenary band while seeking revenge for his father's death.", "type": "anime" },
-  { "id": 67, "title": "JoJo's Bizarre Adventure: Battle Tendency","genre": ["Action","Adventure","Supernatural"], "year": 2012, "rating": 8.5, "poster": "posters/battletendency.jpg",      "description": "Joseph Joestar uses his cleverness to battle ancient supernatural beings.", "type": "anime" },
-  { "id": 70, "title": "JoJo's Bizarre Adventure: Stardust Crusaders","genre":["Action","Adventure","Supernatural"],"year":2014,"rating":8.4,"poster":"posters/stardustcrusaders.jpg",       "description": "Jotaro Kujo and a group of Stand users travel across the world to defeat Dio.", "type": "anime" },
-  { "id": 71, "title": "JoJo's Bizarre Adventure: Diamond Is Unbreakable","genre":["Action","Adventure","Mystery"],"year":2016,"rating":8.5,"poster":"posters/diamondisunbreakable.jpg",    "description": "Josuke Higashikata and his friends uncover strange Stand users and a dangerous serial killer.", "type": "anime" },
-  { "id": 72, "title": "JoJo's Bizarre Adventure: Golden Wind",   "genre": ["Action","Adventure","Crime"],          "year": 2018, "rating": 8.5, "poster": "posters/goldenwind.jpg",          "description": "Giorno Giovanna joins a powerful mafia organization with the dream of becoming its leader.", "type": "anime" },
-  { "id": 73, "title": "JoJo's Bizarre Adventure: Stone Ocean",   "genre": ["Action","Adventure","Supernatural"],   "year": 2021, "rating": 8.2, "poster": "posters/stoneocean.jpg",          "description": "Jolyne Cujoh discovers her Stand ability after being imprisoned for a crime she did not commit.", "type": "anime" }
+  {
+    "id": 1,
+    "title": "Inception",
+    "genre": [
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "year": 2010,
+    "rating": 8.8,
+    "poster": "posters/inception.jpg",
+    "description": "A thief who steals corporate secrets through dream-sharing technology is given the inverse task of planting an idea.",
+    "type": "movie"
+  },
+  {
+    "id": 2,
+    "title": "Interstellar",
+    "genre": [
+      "Sci-Fi",
+      "Drama"
+    ],
+    "year": 2014,
+    "rating": 8.6,
+    "poster": "posters/interstellar.jpg",
+    "description": "A team of explorers travel through a wormhole in space.",
+    "type": "movie"
+  },
+  {
+    "id": 3,
+    "title": "The Matrix",
+    "genre": [
+      "Sci-Fi",
+      "Action"
+    ],
+    "year": 1999,
+    "rating": 8.7,
+    "poster": "posters/matrix.jpg",
+    "description": "A hacker discovers reality is a simulation.",
+    "type": "movie"
+  },
+  {
+    "id": 4,
+    "title": "Avengers Endgame",
+    "genre": [
+      "Action",
+      "Sci-Fi"
+    ],
+    "year": 2019,
+    "rating": 8.4,
+    "poster": "posters/avengersendgame.jpg",
+    "description": "The Avengers assemble for one final battle.",
+    "type": "movie"
+  },
+  {
+    "id": 5,
+    "title": "The Dark Knight",
+    "genre": [
+      "Action",
+      "Thriller"
+    ],
+    "year": 2008,
+    "rating": 9,
+    "poster": "posters/thedarkknight.jpg",
+    "description": "Batman faces the Joker in Gotham City.",
+    "type": "movie"
+  },
+  {
+    "id": 6,
+    "title": "One Punch Man",
+    "genre": [
+      "Action",
+      "Comedy",
+      "Superhero"
+    ],
+    "year": 2015,
+    "rating": 8.4,
+    "poster": "posters/onepunchman.jpg",
+    "description": "A hero who can defeat any opponent with a single punch searches for a worthy challenge.",
+    "type": "anime"
+  },
+  {
+    "id": 7,
+    "title": "Naruto Shippuden",
+    "genre": [
+      "Action",
+      "Adventure",
+      "Fantasy"
+    ],
+    "year": 2007,
+    "rating": 8.7,
+    "poster": "posters/narutoshippuden.jpg",
+    "description": "Naruto Uzumaki continues his journey as a young ninja.",
+    "type": "anime"
+  },
+  {
+    "id": 8,
+    "title": "Dune",
+    "genre": [
+      "Sci-Fi",
+      "Drama"
+    ],
+    "year": 2021,
+    "rating": 8,
+    "poster": "posters/dune.jpg",
+    "description": "A noble family becomes embroiled in a war for a desert planet.",
+    "type": "movie"
+  },
+  {
+    "id": 9,
+    "title": "Everything Everywhere",
+    "genre": [
+      "Sci-Fi",
+      "Comedy"
+    ],
+    "year": 2022,
+    "rating": 7.8,
+    "poster": "posters/everything.jpg",
+    "description": "A woman discovers she must connect with parallel universe versions of herself.",
+    "type": "movie"
+  },
+  {
+    "id": 11,
+    "title": "Spirited Away",
+    "genre": [
+      "Animation",
+      "Fantasy"
+    ],
+    "year": 2001,
+    "rating": 8.6,
+    "poster": "posters/miyazaki.jpg",
+    "description": "A girl finds herself in a strange spirit world.",
+    "type": "anime"
+  },
+  {
+    "id": 13,
+    "title": "Your Name",
+    "genre": [
+      "Animation",
+      "Romance"
+    ],
+    "year": 2016,
+    "rating": 8.4,
+    "poster": "posters/yourname.jpg",
+    "description": "Two teenagers share a strange connection after a comet.",
+    "type": "anime"
+  },
+  {
+    "id": 14,
+    "title": "Demon Slayer",
+    "genre": [
+      "Animation",
+      "Action"
+    ],
+    "year": 2019,
+    "rating": 8.7,
+    "poster": "posters/demonslayer.jpg",
+    "description": "A boy trains to become a demon slayer to save his sister.",
+    "type": "anime"
+  },
+  {
+    "id": 15,
+    "title": "Attack on Titan",
+    "genre": [
+      "Animation",
+      "Action"
+    ],
+    "year": 2013,
+    "rating": 9,
+    "poster": "posters/attackontitan.jpg",
+    "description": "Humanity battles giant humanoid titans.",
+    "type": "anime"
+  },
+  {
+    "id": 16,
+    "title": "My Neighbor Totoro",
+    "genre": [
+      "Animation",
+      "Family"
+    ],
+    "year": 1988,
+    "rating": 8.2,
+    "poster": "posters/myneighbourtotoro.jpg",
+    "description": "Two sisters meet friendly forest spirits.",
+    "type": "anime"
+  },
+  {
+    "id": 17,
+    "title": "Howl's Moving Castle",
+    "genre": [
+      "Animation",
+      "Fantasy"
+    ],
+    "year": 2004,
+    "rating": 8.2,
+    "poster": "posters/howl'smovingcastle.jpg",
+    "description": "A young woman is cursed by a witch and seeks a wizard.",
+    "type": "anime"
+  },
+  {
+    "id": 18,
+    "title": "Akira",
+    "genre": [
+      "Animation",
+      "Sci-Fi"
+    ],
+    "year": 1988,
+    "rating": 8,
+    "poster": "posters/akira.jpg",
+    "description": "A biker gang member discovers a child with telekinetic powers.",
+    "type": "anime"
+  },
+  {
+    "id": 19,
+    "title": "Blade Runner 2049",
+    "genre": [
+      "Sci-Fi",
+      "Drama"
+    ],
+    "year": 2017,
+    "rating": 8,
+    "poster": "posters/bladerunner.jpg",
+    "description": "A young blade runner discovers a secret that could change society.",
+    "type": "movie"
+  },
+  {
+    "id": 20,
+    "title": "Oppenheimer",
+    "genre": [
+      "Drama",
+      "Historical"
+    ],
+    "year": 2023,
+    "rating": 8.9,
+    "poster": "posters/oppenheimer.jpg",
+    "description": "The story of J. Robert Oppenheimer and the atomic bomb.",
+    "type": "movie"
+  },
+  {
+    "id": 21,
+    "title": "Tenet",
+    "genre": [
+      "Action",
+      "Sci-Fi"
+    ],
+    "year": 2020,
+    "rating": 7.4,
+    "poster": "posters/tenet.jpg",
+    "description": "A secret agent manipulates time to prevent World War III.",
+    "type": "movie"
+  },
+  {
+    "id": 23,
+    "title": "Joker",
+    "genre": [
+      "Crime",
+      "Drama"
+    ],
+    "year": 2019,
+    "rating": 8.4,
+    "poster": "posters/joker.jpg",
+    "description": "The origin story of the iconic DC supervillain.",
+    "type": "movie"
+  },
+  {
+    "id": 25,
+    "title": "Neon Genesis Evangelion",
+    "genre": [
+      "Animation",
+      "Sci-Fi"
+    ],
+    "year": 1995,
+    "rating": 8.5,
+    "poster": "posters/evangelion.jpg",
+    "description": "Young pilots battle giant creatures threatening humanity.",
+    "type": "anime"
+  },
+  {
+    "id": 26,
+    "title": "Death Note",
+    "genre": [
+      "Animation",
+      "Thriller"
+    ],
+    "year": 2006,
+    "rating": 9,
+    "poster": "posters/deathnote.jpg",
+    "description": "A high school student finds a notebook that can kill anyone.",
+    "type": "anime"
+  },
+  {
+    "id": 27,
+    "title": "Fullmetal Alchemist",
+    "genre": [
+      "Animation",
+      "Action"
+    ],
+    "year": 2009,
+    "rating": 9.1,
+    "poster": "posters/fma.jpg",
+    "description": "Two brothers search for the philosopher's stone.",
+    "type": "anime"
+  },
+  {
+    "id": 28,
+    "title": "Naruto",
+    "genre": [
+      "Animation",
+      "Action"
+    ],
+    "year": 2002,
+    "rating": 8.3,
+    "poster": "posters/naruto.jpg",
+    "description": "A young ninja dreams of becoming the hokage.",
+    "type": "anime"
+  },
+  {
+    "id": 29,
+    "title": "Avatar",
+    "genre": [
+      "Sci-Fi",
+      "Action"
+    ],
+    "year": 2009,
+    "rating": 7.8,
+    "poster": "posters/avatar.jpg",
+    "description": "A marine on an alien world becomes involved in a conflict between humans and the native population.",
+    "type": "movie"
+  },
+  {
+    "id": 30,
+    "title": "The Shawshank Redemption",
+    "genre": [
+      "Drama",
+      "Crime"
+    ],
+    "year": 1994,
+    "rating": 9.3,
+    "poster": "posters/shawshankredemption.jpg",
+    "description": "A banker sentenced to life builds an unexpected friendship and keeps hope alive.",
+    "type": "movie"
+  },
+  {
+    "id": 31,
+    "title": "Fight Club",
+    "genre": [
+      "Drama",
+      "Thriller"
+    ],
+    "year": 1999,
+    "rating": 8.8,
+    "poster": "posters/fightclub.jpg",
+    "description": "An unhappy office worker forms an underground fight club that grows beyond his control.",
+    "type": "movie"
+  },
+  {
+    "id": 32,
+    "title": "The Godfather",
+    "genre": [
+      "Crime",
+      "Drama"
+    ],
+    "year": 1972,
+    "rating": 9.2,
+    "poster": "posters/godfather.jpg",
+    "description": "The aging patriarch of a powerful crime family transfers control to his reluctant son.",
+    "type": "movie"
+  },
+  {
+    "id": 33,
+    "title": "Jojo's Bizarre Adventure: Phantom Blood",
+    "genre": [
+      "Action",
+      "Adventure"
+    ],
+    "year": 2012,
+    "rating": 7.7,
+    "poster": "posters/phantomblood.jpg",
+    "description": "Jonathan Joestar's peaceful life is shattered when Dio Brando enters his family.",
+    "type": "anime"
+  },
+  {
+    "id": 34,
+    "title": "The Prestige",
+    "genre": [
+      "Drama",
+      "Thriller"
+    ],
+    "year": 2006,
+    "rating": 8.5,
+    "poster": "posters/prestige.jpg",
+    "description": "Two rival magicians become obsessed with creating the ultimate illusion.",
+    "type": "movie"
+  },
+  {
+    "id": 35,
+    "title": "One Piece",
+    "genre": [
+      "Animation",
+      "Action"
+    ],
+    "year": 1999,
+    "rating": 9,
+    "poster": "posters/one piece.jpg",
+    "description": "Monkey D. Luffy and his crew sail across the Grand Line searching for the legendary One Piece.",
+    "type": "anime"
+  },
+  {
+    "id": 36,
+    "title": "Jujutsu Kaisen",
+    "genre": [
+      "Animation",
+      "Action"
+    ],
+    "year": 2020,
+    "rating": 8.6,
+    "poster": "posters/jjk.jpg",
+    "description": "A teenager joins a secret organization of sorcerers after becoming involved with a cursed object.",
+    "type": "anime"
+  },
+  {
+    "id": 37,
+    "title": "My Hero Academia",
+    "genre": [
+      "Animation",
+      "Action"
+    ],
+    "year": 2016,
+    "rating": 8,
+    "poster": "posters/myheroacademia.jpg",
+    "description": "A boy born without superpowers dreams of becoming a hero in a world full of superhuman abilities.",
+    "type": "anime"
+  },
+  {
+    "id": 38,
+    "title": "Tokyo Ghoul",
+    "genre": [
+      "Animation",
+      "Horror"
+    ],
+    "year": 2014,
+    "rating": 7.7,
+    "poster": "posters/tokyoghoul.jpg",
+    "description": "A college student becomes half-ghoul and must learn to survive between two worlds.",
+    "type": "anime"
+  },
+  {
+    "id": 39,
+    "title": "Hunter x Hunter",
+    "genre": [
+      "Animation",
+      "Action"
+    ],
+    "year": 2011,
+    "rating": 9,
+    "poster": "posters/hunterxhunter.jpg",
+    "description": "A young boy becomes a Hunter while searching for his missing father.",
+    "type": "anime"
+  },
+  {
+    "id": 40,
+    "title": "Code Geass",
+    "genre": [
+      "Animation",
+      "Action"
+    ],
+    "year": 2006,
+    "rating": 8.7,
+    "poster": "posters/codegeass.jpg",
+    "description": "A mysterious power gives a young prince the ability to command others as he seeks to overthrow an empire.",
+    "type": "anime"
+  },
+  {
+    "id": 41,
+    "title": "Baahubali: The Beginning",
+    "genre": [
+      "Action",
+      "Drama",
+      "Fantasy"
+    ],
+    "year": 2015,
+    "rating": 8,
+    "poster": "posters/bahubali.jpg",
+    "description": "A young man discovers his royal heritage and becomes involved in a struggle against the tyrant ruling the kingdom of Mahishmati.",
+    "type": "movie"
+  },
+  {
+    "id": 42,
+    "title": "Baahubali: The Conclusion",
+    "genre": [
+      "Action",
+      "Drama",
+      "Fantasy"
+    ],
+    "year": 2017,
+    "rating": 8.2,
+    "poster": "posters/bahubali2.jpg",
+    "description": "Amarendra Baahubali's life and relationships are threatened when his brother plots to seize the throne.",
+    "type": "movie"
+  },
+  {
+    "id": 43,
+    "title": "Salaar",
+    "genre": [
+      "Action",
+      "Crime",
+      "Drama"
+    ],
+    "year": 2023,
+    "rating": 6.7,
+    "poster": "posters/salaar.jpg",
+    "description": "A powerful warrior is drawn into a violent struggle over a contested kingdom and an old friendship.",
+    "type": "movie"
+  },
+  {
+    "id": 44,
+    "title": "RRR",
+    "genre": [
+      "Action",
+      "Adventure",
+      "Drama"
+    ],
+    "year": 2022,
+    "rating": 7.8,
+    "poster": "posters/rrr.jpg",
+    "description": "Two legendary revolutionaries form an unexpected friendship while fighting against British rule in pre-independent India.",
+    "type": "movie"
+  },
+  {
+    "id": 45,
+    "title": "Irumudi",
+    "genre": [
+      "Drama",
+      "Action"
+    ],
+    "year": 2026,
+    "rating": 7.5,
+    "poster": "posters/irumudi.jpg",
+    "description": "An emotional social drama centered around a father and his daughter.",
+    "type": "movie"
+  },
+  {
+    "id": 46,
+    "title": "Pushpa: The Rise",
+    "genre": [
+      "Action",
+      "Crime",
+      "Drama"
+    ],
+    "year": 2021,
+    "rating": 7.6,
+    "poster": "posters/pushpa.jpg",
+    "description": "A labourer rises through the ranks of a red sandalwood smuggling syndicate.",
+    "type": "movie"
+  },
+  {
+    "id": 47,
+    "title": "Pushpa 2: The Rule",
+    "genre": [
+      "Action",
+      "Crime",
+      "Drama"
+    ],
+    "year": 2024,
+    "rating": 6.1,
+    "poster": "posters/pushpa2.jpg",
+    "description": "Pushpa faces powerful rivals and political challenges as he expands his influence.",
+    "type": "movie"
+  },
+  {
+    "id": 48,
+    "title": "Peddi",
+    "genre": [
+      "Action",
+      "Drama",
+      "Sports"
+    ],
+    "year": 2026,
+    "rating": 0,
+    "poster": "posters/peddi.jpg",
+    "description": "A sports drama centered around a powerful rural character shaped by ambition and conflict.",
+    "type": "movie"
+  },
+  {
+    "id": 49,
+    "title": "Rao Bahadur",
+    "genre": [
+      "Drama",
+      "Thriller"
+    ],
+    "year": 2026,
+    "rating": 0,
+    "poster": "posters/raobahadur.jpg",
+    "description": "A psychological drama set against a fading aristocratic world, blending suspense and magical realism.",
+    "type": "movie"
+  },
+  {
+    "id": 50,
+    "title": "Kalki 2898 AD",
+    "genre": [
+      "Sci-Fi",
+      "Action",
+      "Fantasy"
+    ],
+    "year": 2024,
+    "rating": 7,
+    "poster": "posters/kalki.jpg",
+    "description": "In a futuristic world, a pregnant woman is protected by an immortal warrior while powerful forces hunt her.",
+    "type": "movie"
+  },
+  {
+    "id": 51,
+    "title": "Hi Nanna",
+    "genre": [
+      "Drama",
+      "Romance",
+      "Family"
+    ],
+    "year": 2023,
+    "rating": 8.3,
+    "poster": "posters/hinanna.jpg",
+    "description": "A single father begins telling his daughter the story of her missing mother.",
+    "type": "movie"
+  },
+  {
+    "id": 52,
+    "title": "They Call Him OG",
+    "genre": [
+      "Action",
+      "Crime",
+      "Drama"
+    ],
+    "year": 2025,
+    "rating": 0,
+    "poster": "posters/og.jpg",
+    "description": "A retired gangster returns to Bombay after years away and confronts a powerful rival from his past.",
+    "type": "movie"
+  },
+  {
+    "id": 53,
+    "title": "Rangasthalam",
+    "genre": [
+      "Drama",
+      "Action",
+      "Thriller"
+    ],
+    "year": 2018,
+    "rating": 8.2,
+    "poster": "posters/rangasthalam.jpg",
+    "description": "A partially deaf villager and his brother challenge a corrupt village president.",
+    "type": "movie"
+  },
+  {
+    "id": 54,
+    "title": "Saripodhaa Sanivaaram",
+    "genre": [
+      "Action",
+      "Thriller",
+      "Drama"
+    ],
+    "year": 2024,
+    "rating": 6.8,
+    "poster": "posters/saripodhasanivaram.jpg",
+    "description": "A man who controls his anger throughout the week unleashes his fury on Saturdays.",
+    "type": "movie"
+  },
+  {
+    "id": 55,
+    "title": "Eega",
+    "genre": [
+      "Action",
+      "Comedy",
+      "Fantasy"
+    ],
+    "year": 2012,
+    "rating": 7.7,
+    "poster": "posters/eega.jpg",
+    "description": "After being murdered, a man is reincarnated as a housefly and sets out to avenge his death.",
+    "type": "movie"
+  },
+  {
+    "id": 56,
+    "title": "Little Hearts",
+    "genre": [
+      "Comedy",
+      "Romance"
+    ],
+    "year": 2025,
+    "rating": 7.6,
+    "poster": "posters/littlehearts.jpg",
+    "description": "After failing his entrance exam, a young man joins a coaching centre where he meets a girl.",
+    "type": "movie"
+  },
+  {
+    "id": 57,
+    "title": "Bleach",
+    "genre": [
+      "Action",
+      "Adventure",
+      "Supernatural"
+    ],
+    "year": 2004,
+    "rating": 8.2,
+    "poster": "posters/bleach.jpg",
+    "description": "Ichigo Kurosaki gains the powers of a Soul Reaper and must protect the living world.",
+    "type": "anime"
+  },
+  {
+    "id": 58,
+    "title": "Bleach: Thousand-Year Blood War",
+    "genre": [
+      "Action",
+      "Adventure",
+      "Supernatural"
+    ],
+    "year": 2022,
+    "rating": 9,
+    "poster": "posters/tybw.jpg",
+    "description": "Ichigo and the Soul Reapers face a devastating war against the Quincy army.",
+    "type": "anime"
+  },
+  {
+    "id": 59,
+    "title": "Black Clover",
+    "genre": [
+      "Action",
+      "Adventure",
+      "Fantasy"
+    ],
+    "year": 2017,
+    "rating": 8.2,
+    "poster": "posters/blackclover.jpg",
+    "description": "Asta, a boy born without magic, trains relentlessly to become the greatest Magic Knight.",
+    "type": "anime"
+  },
+  {
+    "id": 60,
+    "title": "Dragon Ball Z",
+    "genre": [
+      "Action",
+      "Adventure",
+      "Fantasy"
+    ],
+    "year": 1989,
+    "rating": 8.8,
+    "poster": "posters/dragonballz.jpg",
+    "description": "Goku and his allies defend Earth from powerful warriors and villains.",
+    "type": "anime"
+  },
+  {
+    "id": 61,
+    "title": "Chainsaw Man",
+    "genre": [
+      "Action",
+      "Horror",
+      "Supernatural"
+    ],
+    "year": 2022,
+    "rating": 8.4,
+    "poster": "posters/chainsawman.jpg",
+    "description": "After being betrayed and killed, a young devil hunter merges with his pet devil.",
+    "type": "anime"
+  },
+  {
+    "id": 62,
+    "title": "Solo Leveling",
+    "genre": [
+      "Action",
+      "Fantasy",
+      "Adventure"
+    ],
+    "year": 2024,
+    "rating": 8.8,
+    "poster": "posters/sololevelling.jpg",
+    "description": "A weak hunter gains a mysterious ability that allows him to level up on his own.",
+    "type": "anime"
+  },
+  {
+    "id": 63,
+    "title": "Steins;Gate",
+    "genre": [
+      "Sci-Fi",
+      "Thriller",
+      "Drama"
+    ],
+    "year": 2011,
+    "rating": 9,
+    "poster": "posters/steinsgate.jpg",
+    "description": "A group of friends discovers a way to send messages into the past.",
+    "type": "anime"
+  },
+  {
+    "id": 64,
+    "title": "Your Lie in April",
+    "genre": [
+      "Drama",
+      "Romance",
+      "Music"
+    ],
+    "year": 2014,
+    "rating": 8.6,
+    "poster": "posters/yourlieinapril.jpg",
+    "description": "A gifted pianist who has lost his ability to hear music meets a spirited violinist.",
+    "type": "anime"
+  },
+  {
+    "id": 65,
+    "title": "Vinland Saga",
+    "genre": [
+      "Action",
+      "Adventure",
+      "Historical"
+    ],
+    "year": 2019,
+    "rating": 8.8,
+    "poster": "posters/vinlandsaga.jpg",
+    "description": "A young Viking warrior joins a mercenary band while seeking revenge for his father's death.",
+    "type": "anime"
+  },
+  {
+    "id": 67,
+    "title": "JoJo's Bizarre Adventure: Battle Tendency",
+    "genre": [
+      "Action",
+      "Adventure",
+      "Supernatural"
+    ],
+    "year": 2012,
+    "rating": 8.5,
+    "poster": "posters/battletendency.jpg",
+    "description": "Joseph Joestar uses his cleverness to battle ancient supernatural beings.",
+    "type": "anime"
+  },
+  {
+    "id": 70,
+    "title": "JoJo's Bizarre Adventure: Stardust Crusaders",
+    "genre": [
+      "Action",
+      "Adventure",
+      "Supernatural"
+    ],
+    "year": 2014,
+    "rating": 8.4,
+    "poster": "posters/stardustcrusaders.jpg",
+    "description": "Jotaro Kujo and a group of Stand users travel across the world to defeat Dio.",
+    "type": "anime"
+  },
+  {
+    "id": 71,
+    "title": "JoJo's Bizarre Adventure: Diamond Is Unbreakable",
+    "genre": [
+      "Action",
+      "Adventure",
+      "Mystery"
+    ],
+    "year": 2016,
+    "rating": 8.5,
+    "poster": "posters/diamondisunbreakable.jpg",
+    "description": "Josuke Higashikata and his friends uncover strange Stand users and a dangerous serial killer.",
+    "type": "anime"
+  },
+  {
+    "id": 72,
+    "title": "JoJo's Bizarre Adventure: Golden Wind",
+    "genre": [
+      "Action",
+      "Adventure",
+      "Crime"
+    ],
+    "year": 2018,
+    "rating": 8.5,
+    "poster": "posters/goldenwind.jpg",
+    "description": "Giorno Giovanna joins a powerful mafia organization with the dream of becoming its leader.",
+    "type": "anime"
+  },
+  {
+    "id": 73,
+    "title": "JoJo's Bizarre Adventure: Stone Ocean",
+    "genre": [
+      "Action",
+      "Adventure",
+      "Supernatural"
+    ],
+    "year": 2021,
+    "rating": 8.2,
+    "poster": "posters/stoneocean.jpg",
+    "description": "Jolyne Cujoh discovers her Stand ability after being imprisoned for a crime she did not commit.",
+    "type": "anime"
+  },
+  {
+    "id": 74,
+    "title": "Mayabazar",
+    "type": "movie",
+    "year": 1957,
+    "rating": 8,
+    "genre": [
+      "Fantasy",
+      "Drama",
+      "Comedy"
+    ],
+    "description": "Balarama promises Subhadra that he'll marry his daughter to her son. But when the Pandavas lose their kingdom to the Kauravas, Balarama breaks his promise.",
+    "poster": "https://image.tmdb.org/t/p/w500/pJfpDHlmVgMgg0VNCufj9gIhnbU.jpg"
+  },
+  {
+    "id": 75,
+    "title": "Siva",
+    "type": "movie",
+    "year": 1989,
+    "rating": 6.5,
+    "genre": [
+      "Action",
+      "Drama",
+      "Crime"
+    ],
+    "description": "Siva is a new student in the community college. He is welcomed by a group of collegians, including the lovely Asha, to whom Shiva is instantly attracted. Shiva notices that there is violence within the college, perpetrated by people who are not even students. When he decides to find out their motives, he is met with violence, and threats. Now Shiva must decide to stand up for his college, or just carry on studying, finish college, and move on and get to on job.",
+    "poster": "https://image.tmdb.org/t/p/w500/q6loMZxRfWdgmpK9OzHNtwSVHxs.jpg"
+  },
+  {
+    "id": 76,
+    "title": "Geethanjali",
+    "type": "movie",
+    "year": 1985,
+    "rating": 7,
+    "genre": [],
+    "description": "Geethanjali is a 1985 Tamil Indian feature film directed by K.Rangaraj. The film stars Murali, Sathyaraj and Nalini in the lead roles.",
+    "poster": "https://image.tmdb.org/t/p/w500/egxFJwa38EaShrDgQnLhv5qDSJw.jpg"
+  },
+  {
+    "id": 77,
+    "title": "Jagadeka Veerudu Athiloka Sundari",
+    "type": "movie",
+    "year": 1990,
+    "rating": 8,
+    "genre": [
+      "Action",
+      "Comedy",
+      "Fantasy"
+    ],
+    "description": "A man finds a ring that gives the bearer great power, but the goddess to whom the ring belongs wants it back to return to her world.",
+    "poster": "https://image.tmdb.org/t/p/w500/q1B0XgJmzlSP6sujx95ny2tSwrK.jpg"
+  },
+  {
+    "id": 78,
+    "title": "Hello Brother",
+    "type": "movie",
+    "year": 1999,
+    "rating": 5.6,
+    "genre": [
+      "Comedy",
+      "Romance"
+    ],
+    "description": "A ghost seeking revenge for his death haunts the man who received his heart in a transplant.",
+    "poster": "https://image.tmdb.org/t/p/w500/edwYmD9YUs6gMPEkNOA78f28pwM.jpg"
+  },
+  {
+    "id": 79,
+    "title": "Bommarillu",
+    "type": "movie",
+    "year": 2006,
+    "rating": 6.6,
+    "genre": [
+      "Drama",
+      "Romance"
+    ],
+    "description": "Siddu is the son of an over-protective business man. Every decision of his is made by his father, which leads him into frustration. He half-heartedly agrees to become engaged to a rich man's daughter, but then falls for a middle-class man's daughter called Haasini. The film focuses on his realization that he has to stand on his own and come out of his father's protective shell - and try to succeed in love.",
+    "poster": "https://image.tmdb.org/t/p/w500/oYN5XJzV9dYGwzq4fmp41xcIaDS.jpg"
+  },
+  {
+    "id": 80,
+    "title": "Athadu",
+    "type": "movie",
+    "year": 2005,
+    "rating": 7.7,
+    "genre": [
+      "Action",
+      "Thriller",
+      "Family"
+    ],
+    "description": "A hitman, Nandu, is hired to stage the assassination of a politician. However, when the politician is actually killed and Nandu is framed for the murder, he assumes a dead man's identity to evade the law.",
+    "poster": "https://image.tmdb.org/t/p/w500/ojZAu2KOemaDEfLnJXZeuU9QQko.jpg"
+  },
+  {
+    "id": 81,
+    "title": "Pokiri",
+    "type": "movie",
+    "year": 2006,
+    "rating": 7.5,
+    "genre": [
+      "Action",
+      "Thriller",
+      "Crime"
+    ],
+    "description": "Pandu is a contract killer and will accept any contract provided the amount is right. The police want him for questioning, while the underworld needs him to silence their opponents. No one really knows this assassin's background. It is only Pandu who knows his real identity, and he has no intention of sharing it with anyone.",
+    "poster": "https://image.tmdb.org/t/p/w500/rQ8NH5f3CxRrmqZWMZNYPwLmjDS.jpg"
+  },
+  {
+    "id": 82,
+    "title": "Okkadu",
+    "type": "movie",
+    "year": 2003,
+    "rating": 7.7,
+    "genre": [
+      "Romance",
+      "Action",
+      "Drama"
+    ],
+    "description": "Ajay, a fiery Kabaddi player from Hyderabad, visits Kurnool for a tournament and rescues Swapna from a faction leader Obul Reddy, who wants to force her into marriage. He secretly hides her in his home and assists her in planning her escape abroad for her higher studies. But, fate has other plans.",
+    "poster": "https://image.tmdb.org/t/p/w500/nVBa5QWSPrVzFyHK2XWrsruQzyl.jpg"
+  },
+  {
+    "id": 83,
+    "title": "Aarya",
+    "type": "movie",
+    "year": 2004,
+    "rating": 6.6,
+    "genre": [
+      "Romance",
+      "Drama"
+    ],
+    "description": "Aarya is a happy-go-lucky young man who goes to college. When he falls in love with Geetha at first sight, he proposes to her - in front of her boyfriend Ajay, who recently also proposed to her. She bluntly refuses, but ...",
+    "poster": "https://image.tmdb.org/t/p/w500/82yMSleCMG3XGTPzh385Tk6YSYH.jpg"
+  },
+  {
+    "id": 84,
+    "title": "Jalsa",
+    "type": "movie",
+    "year": 2008,
+    "rating": 6.9,
+    "genre": [
+      "Action",
+      "Comedy"
+    ],
+    "description": "Sanjay falls in love with Indu. Her father Rammohan Reddy doesnt approve of it and she is married to someone else. Later, Bhagyamathi falls for him and he goes to meet her father who turns out to be Rammohan Reddy. Somewhere in between Sanjay's life as a Naxal is depicted.",
+    "poster": "https://image.tmdb.org/t/p/w500/xVzwnGouqZtBDDfp3Q2fGr0Sh16.jpg"
+  },
+  {
+    "id": 85,
+    "title": "Khaleja",
+    "type": "movie",
+    "year": 2010,
+    "rating": 7.4,
+    "genre": [
+      "Action",
+      "Fantasy",
+      "Comedy"
+    ],
+    "description": "A village is hounded by an unknown disease, decimating its population. The village priest prophesies that God's avatar will save them. Siddha goes in search of this supernatural potential and finds it in Seetarama Raju, a cab driver.",
+    "poster": "https://image.tmdb.org/t/p/w500/rsQbJT4vjyQe6Mpry1i8Tnf86wp.jpg"
+  },
+  {
+    "id": 86,
+    "title": "Julayi",
+    "type": "movie",
+    "year": 2012,
+    "rating": 6.4,
+    "genre": [
+      "Action",
+      "Comedy",
+      "Crime",
+      "Thriller"
+    ],
+    "description": "An intelligent young man and a timid cop team up to catch a criminal who wants revenge after a foiled bank robbery.",
+    "poster": "https://image.tmdb.org/t/p/w500/tIUBifudyRCKhF1utslaDoDRteW.jpg"
+  },
+  {
+    "id": 87,
+    "title": "Mirchi",
+    "type": "movie",
+    "year": 2013,
+    "rating": 6.3,
+    "genre": [
+      "Action",
+      "Drama"
+    ],
+    "description": "A man returns to his country in order, ostensibly, to reform his girlfriend's violent family, but he seems to have a strange connection and a rather dark past.",
+    "poster": "https://image.tmdb.org/t/p/w500/rNj5OmO7KXkZsmsZO7XI6CX0aRs.jpg"
+  },
+  {
+    "id": 88,
+    "title": "Arjun Reddy",
+    "type": "movie",
+    "year": 2017,
+    "rating": 7,
+    "genre": [
+      "Drama",
+      "Romance"
+    ],
+    "description": "A brilliant but impulsive young surgeon spirals into self-destruction after a painful breakup, struggling to cope with love, loss, and the consequences of his own temper.",
+    "poster": "https://image.tmdb.org/t/p/w500/kHubDgL59I5hCn7ccBYvU7bKY1r.jpg"
+  },
+  {
+    "id": 89,
+    "title": "Goodachari",
+    "type": "movie",
+    "year": 2018,
+    "rating": 6.9,
+    "genre": [
+      "Thriller",
+      "Action",
+      "Crime"
+    ],
+    "description": "Gopi, is the son of an ex-RAW agent Raghuveer. Brought up by his uncle Sathya, he wants to be an agent just like his father and uncle. But Satya wants him to lead a normal life and not be killed like his father was. What happens in Gopi’s life that turns everything upside down?",
+    "poster": "https://image.tmdb.org/t/p/w500/uG04EjdV1zrj91ROxP75jwRxxv0.jpg"
+  },
+  {
+    "id": 90,
+    "title": "Jersey Boys",
+    "type": "movie",
+    "year": 2014,
+    "rating": 6.8,
+    "genre": [
+      "Music",
+      "Drama"
+    ],
+    "description": "A musical biopic of the Four Seasons—the rise, the tough times and personal clashes, and the ultimate triumph of a group of friends whose music became symbolic of a generation. Far from a mere tribute concert, it gets to the heart of the relationships at the centre of the group, with a special focus on frontman Frankie Valli, the small kid with the big falsetto.",
+    "poster": "https://image.tmdb.org/t/p/w500/kz956Y83YtT6vTyg0Q40mzRe2UM.jpg"
+  },
+  {
+    "id": 91,
+    "title": "Sita Ramam",
+    "type": "movie",
+    "year": 2022,
+    "rating": 7.8,
+    "genre": [
+      "History",
+      "Romance",
+      "Drama"
+    ],
+    "description": "Afreen, a rebellious Pakistani student sets ablaze the car of an Indian in London. Angered Afreen returns to Pakistan to ask for money from her grandfather that she has to pay in a month's time as damages. However, she gets to know that he is no more and the only thing he has left for her is a letter-delivering task, written by Ram to Sita. As Afreen sets out to find Ram, there begins her journey of discovering the secret behind the 20-year-old letter.",
+    "poster": "https://image.tmdb.org/t/p/w500/t1O94ZBzsQXJihtVkrsStRLyUDR.jpg"
+  },
+  {
+    "id": 92,
+    "title": "DJ Tillu",
+    "type": "movie",
+    "year": 2022,
+    "rating": 6,
+    "genre": [
+      "Romance",
+      "Comedy",
+      "Crime",
+      "Thriller"
+    ],
+    "description": "When a local DJ and his affair with a young woman put him square in the middle of a crime, he must do his best to get out of the predicament he’s in.",
+    "poster": "https://image.tmdb.org/t/p/w500/2XKg3VhpFDXdAktwKvFMSuIneE3.jpg"
+  },
+  {
+    "id": 93,
+    "title": "Yamadonga",
+    "type": "movie",
+    "year": 2007,
+    "rating": 6.3,
+    "genre": [
+      "Fantasy",
+      "Action",
+      "Comedy"
+    ],
+    "description": "Raja, an orphaned thief, dies while helping a gang in kidnapping a wealthy heiress, Mahi, in exchange of money. He then lands in Yamlok and fights with Yama, the god of death, to get his life back.",
+    "poster": "https://image.tmdb.org/t/p/w500/3CcAZYYkG0dralHCyOmouS6dNPh.jpg"
+  },
+  {
+    "id": 94,
+    "title": "Devara: Part 1",
+    "type": "movie",
+    "year": 2024,
+    "rating": 6.9,
+    "genre": [
+      "Action",
+      "Drama"
+    ],
+    "description": "Devara, a fearless man from a coastal region, embarks on a perilous journey into the treacherous world of the sea to safeguard the lives of his people. Unbeknownst to him, his brother Bhaira is plotting a conspiracy against him. As events unfold, Devara passes on his legacy to his mild-mannered and timid son, Varada.",
+    "poster": "https://image.tmdb.org/t/p/w500/lQfuaXjANoTsdx5iS0gCXlK9D2L.jpg"
+  },
+  {
+    "id": 95,
+    "title": "Guntur Kaaram",
+    "type": "movie",
+    "year": 2024,
+    "rating": 5.3,
+    "genre": [
+      "Action",
+      "Drama"
+    ],
+    "description": "Years after his mother left him and remarried, Ramana is asked to sign documents denying any relations with his mother, but he refuses and demands answer to why his mother left him.",
+    "poster": "https://image.tmdb.org/t/p/w500/qvBt4YLy274ZmoMAfVlwmHkjVkq.jpg"
+  },
+  {
+    "id": 96,
+    "title": "The Rajasaab",
+    "type": "movie",
+    "year": 2026,
+    "rating": 5,
+    "genre": [
+      "Comedy",
+      "Horror",
+      "Fantasy",
+      "Action"
+    ],
+    "description": "Seeking his lost grandfather, a young man enters a haunted mansion and awakens a family curse powerful enough to upend both his life and reality.",
+    "poster": "https://image.tmdb.org/t/p/w500/nvK6gYa4diCnQkDVN42uoYXPrdT.jpg"
+  },
+  {
+    "id": 97,
+    "title": "Strange Darling",
+    "type": "movie",
+    "year": 2024,
+    "rating": 6.9,
+    "genre": [
+      "Horror",
+      "Thriller"
+    ],
+    "description": "Nothing is what it seems when a twisted one-night stand spirals into a serial killer’s vicious murder spree.",
+    "poster": "https://image.tmdb.org/t/p/w500/kWNCRgt3ocv19bYO0sk7TRuZuFY.jpg"
+  },
+  {
+    "id": 98,
+    "title": "Eeshwar",
+    "type": "movie",
+    "year": 1989,
+    "rating": 7,
+    "genre": [
+      "Drama",
+      "Family"
+    ],
+    "description": "Ishwar is a simple-minded and honest young man, devout and religious, he cares for everybody. He meets with a young widow with a son and marries her. This story is about him and his trials and triumphs.",
+    "poster": "https://image.tmdb.org/t/p/w500/oHpahU36IRBwLsdXrCCAQCO9SVc.jpg"
+  },
+  {
+    "id": 99,
+    "title": "Varsham",
+    "type": "movie",
+    "year": 2004,
+    "rating": 6.3,
+    "genre": [
+      "Drama",
+      "Thriller",
+      "Romance"
+    ],
+    "description": "Venkat and Sailaja meet on a train and fall in love. But Sailaja's father disapproves of their relationship and decides to marry her off to Bhadranna, a ruthless landlord, who is obsessed with her.",
+    "poster": "https://image.tmdb.org/t/p/w500/3OkbWNeRVQopeGwdocnwk0fXW3j.jpg"
+  },
+  {
+    "id": 100,
+    "title": "Chatrapathi",
+    "type": "movie",
+    "year": 2005,
+    "rating": 6.9,
+    "genre": [
+      "Drama",
+      "Action"
+    ],
+    "description": "Sivaji and his family are uprooted from their community in Sri Lanka and wind up as bonded labourers in Vishakhapatnam. Like his legendary namesake, he rises up to become the saviour of the oppressed.",
+    "poster": "https://image.tmdb.org/t/p/w500/f9SjU4lj4jraX9WBYZAasbc79GX.jpg"
+  },
+  {
+    "id": 101,
+    "title": "Billa",
+    "type": "movie",
+    "year": 2012,
+    "rating": 5.8,
+    "genre": [
+      "Action",
+      "Crime"
+    ],
+    "description": "Small-time diamond smuggler David befriends Goa-based gangster Abbasi. But when David begins to build inroads with an international gangster, Abbasi is not happy, and soon the two turn into bitter rivals.",
+    "poster": "https://image.tmdb.org/t/p/w500/gADzX6C4pGHneBoU148LXFMDyMr.jpg"
+  },
+  {
+    "id": 102,
+    "title": "Mr. Perfect",
+    "type": "movie",
+    "year": 2011,
+    "rating": 6.5,
+    "genre": [
+      "Romance",
+      "Comedy"
+    ],
+    "description": "Vicky breaks his engagement with Priya, his childhood friend, after he learns that she is making many compromises for his sake. However, time makes him realise the need for compromises in life.",
+    "poster": "https://image.tmdb.org/t/p/w500/tOYpxUX2ISEvdJ1FqwPUZAPy2Hy.jpg"
+  },
+  {
+    "id": 103,
+    "title": "Saaho",
+    "type": "movie",
+    "year": 2019,
+    "rating": 5.7,
+    "genre": [
+      "Action",
+      "Adventure",
+      "Thriller"
+    ],
+    "description": "A battle for power ensues as warring gangters thrive to gain possession of a \"black box\" that can make them richer than they already are, and an undercover cop intervenes with the help of his sharp intellect and an instinct to kill.",
+    "poster": "https://image.tmdb.org/t/p/w500/rWXIpR2uPkwb1Hrhjj2FA62FGdu.jpg"
+  },
+  {
+    "id": 104,
+    "title": "Iron Man",
+    "type": "movie",
+    "year": 2008,
+    "rating": 7.7,
+    "genre": [
+      "Action",
+      "Sci-Fi",
+      "Adventure"
+    ],
+    "description": "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
+    "poster": "https://image.tmdb.org/t/p/w500/78lPtwv72eTNqFW9COBYI0dWDJa.jpg"
+  },
+  {
+    "id": 105,
+    "title": "Thor",
+    "type": "movie",
+    "year": 2011,
+    "rating": 6.8,
+    "genre": [
+      "Adventure",
+      "Fantasy",
+      "Action"
+    ],
+    "description": "Against his father Odin's will, The Mighty Thor - a powerful but arrogant warrior god - recklessly reignites an ancient war. Thor is cast down to Earth and forced to live among humans as punishment. Once here, Thor learns what it takes to be a true hero when the most dangerous villain of his world sends the darkest forces of Asgard to invade Earth.",
+    "poster": "https://image.tmdb.org/t/p/w500/prSfAi1xGrhLQNxVSUFh61xQ4Qy.jpg"
+  },
+  {
+    "id": 106,
+    "title": "Captain America: The First Avenger",
+    "type": "movie",
+    "year": 2011,
+    "rating": 7,
+    "genre": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ],
+    "description": "During World War II, Steve Rogers is a sickly man from Brooklyn who's transformed into super-soldier Captain America to aid in the war effort. Rogers must stop the Red Skull – Adolf Hitler's ruthless head of weaponry, and the leader of an organization that intends to use a mysterious device of untold powers for world domination.",
+    "poster": "https://image.tmdb.org/t/p/w500/vSNxAJTlD0r02V9sPYpOjqDZXUK.jpg"
+  },
+  {
+    "id": 107,
+    "title": "Iron Man 2",
+    "type": "movie",
+    "year": 2010,
+    "rating": 6.9,
+    "genre": [
+      "Adventure",
+      "Action",
+      "Sci-Fi"
+    ],
+    "description": "With the world now aware of his dual life as the armored superhero Iron Man, billionaire inventor Tony Stark faces pressure from the government, the press and the public to share his technology with the military. Unwilling to let go of his invention, Stark, with Pepper Potts and James 'Rhodey' Rhodes at his side, must forge new alliances – and confront powerful enemies.",
+    "poster": "https://image.tmdb.org/t/p/w500/6WBeq4fCfn7AN0o21W9qNcRF2l9.jpg"
+  },
+  {
+    "id": 108,
+    "title": "Iron Man 3",
+    "type": "movie",
+    "year": 2013,
+    "rating": 6.9,
+    "genre": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ],
+    "description": "When Tony Stark's world is torn apart by a formidable terrorist called the Mandarin, he starts an odyssey of rebuilding and retribution.",
+    "poster": "https://image.tmdb.org/t/p/w500/qhPtAc1TKbMPqNvcdXSOn9Bn7hZ.jpg"
+  },
+  {
+    "id": 109,
+    "title": "Guardians of the Galaxy",
+    "type": "movie",
+    "year": 2014,
+    "rating": 7.9,
+    "genre": [
+      "Action",
+      "Sci-Fi",
+      "Adventure"
+    ],
+    "description": "Light years from Earth, 26 years after being abducted, Peter Quill finds himself the prime target of a manhunt after discovering an orb wanted by Ronan the Accuser.",
+    "poster": "https://image.tmdb.org/t/p/w500/r7vmZjiyZw9rpJMQJdXpjgiCOk9.jpg"
+  },
+  {
+    "id": 110,
+    "title": "Black Panther",
+    "type": "movie",
+    "year": 2018,
+    "rating": 7.4,
+    "genre": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ],
+    "description": "King T'Challa returns home to the reclusive, technologically advanced African nation of Wakanda to serve as his country's new leader. However, T'Challa soon finds that he is challenged for the throne by factions within his own country as well as without. Using powers reserved to Wakandan kings, T'Challa assumes the Black Panther mantle to join with ex-girlfriend Nakia, the queen-mother, his princess-kid sister, members of the Dora Milaje (the Wakandan 'special forces') and an American secret agent, to prevent Wakanda from being dragged into a world war.",
+    "poster": "https://image.tmdb.org/t/p/w500/uxzzxijgPIY7slzFvMotPv8wjKA.jpg"
+  },
+  {
+    "id": 111,
+    "title": "Thor: Ragnarok",
+    "type": "movie",
+    "year": 2017,
+    "rating": 7.6,
+    "genre": [
+      "Action",
+      "Sci-Fi",
+      "Comedy",
+      "Adventure"
+    ],
+    "description": "Thor is imprisoned on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the destruction of his home-world and the end of Asgardian civilization, at the hands of a powerful new threat, the ruthless Hela.",
+    "poster": "https://image.tmdb.org/t/p/w500/rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg"
+  },
+  {
+    "id": 112,
+    "title": "Spider-Man: Homecoming",
+    "type": "movie",
+    "year": 2017,
+    "rating": 7.3,
+    "genre": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ],
+    "description": "Following the events of Captain America: Civil War, Peter Parker, with the help of his mentor Tony Stark, tries to balance his life as an ordinary high school student in Queens, New York City, with fighting crime as his superhero alter ego Spider-Man as a new threat, the Vulture, emerges.",
+    "poster": "https://image.tmdb.org/t/p/w500/c24sv2weTHPsmDa7jEMN0m2P3RT.jpg"
+  },
+  {
+    "id": 113,
+    "title": "Spider-Man: Far From Home",
+    "type": "movie",
+    "year": 2019,
+    "rating": 7.4,
+    "genre": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ],
+    "description": "Peter Parker and his friends go on a summer trip to Europe. However, they will hardly be able to rest - Peter will have to agree to help Nick Fury uncover the mystery of creatures that cause natural disasters and destruction throughout the continent.",
+    "poster": "https://image.tmdb.org/t/p/w500/4q2NNj4S5dG2RLF9CpXsej7yXl.jpg"
+  },
+  {
+    "id": 114,
+    "title": "Spider-Man: No Way Home",
+    "type": "movie",
+    "year": 2021,
+    "rating": 7.9,
+    "genre": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ],
+    "description": "Peter Parker is unmasked and no longer able to separate his normal life from the high-stakes of being a super-hero. When he asks for help from Doctor Strange the stakes become even more dangerous, forcing him to discover what it truly means to be Spider-Man.",
+    "poster": "https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg"
+  },
+  {
+    "id": 115,
+    "title": "Doctor Strange",
+    "type": "movie",
+    "year": 2016,
+    "rating": 7.4,
+    "genre": [
+      "Fantasy",
+      "Adventure",
+      "Action"
+    ],
+    "description": "After his career is destroyed, a brilliant but arrogant surgeon gets a new lease on life when a sorcerer takes him under her wing and trains him to defend the world against evil.",
+    "poster": "https://image.tmdb.org/t/p/w500/uGBVj3bEbCoZbDjjl9wTxcygko1.jpg"
+  },
+  {
+    "id": 116,
+    "title": "Deadpool & Wolverine",
+    "type": "movie",
+    "year": 2024,
+    "rating": 7.6,
+    "genre": [
+      "Action",
+      "Comedy",
+      "Sci-Fi"
+    ],
+    "description": "A listless Wade Wilson toils away in civilian life with his days as the morally flexible mercenary, Deadpool, behind him. But when his homeworld faces an existential threat, Wade must reluctantly suit-up again with an even more reluctant Wolverine.",
+    "poster": "https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg"
+  },
+  {
+    "id": 117,
+    "title": "Avengers: Infinity War",
+    "type": "movie",
+    "year": 2018,
+    "rating": 8.2,
+    "genre": [
+      "Adventure",
+      "Action",
+      "Sci-Fi"
+    ],
+    "description": "As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment - the fate of Earth and existence itself has never been more uncertain.",
+    "poster": "https://image.tmdb.org/t/p/w500/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg"
+  },
+  {
+    "id": 118,
+    "title": "Avengers: Doomsday",
+    "type": "movie",
+    "year": 2026,
+    "rating": 0,
+    "genre": [
+      "Sci-Fi",
+      "Action",
+      "Adventure"
+    ],
+    "description": "Beloved heroes from three distinct universes are set on a deadly collision course and face an existential threat unlike anything they've ever encountered.",
+    "poster": "https://image.tmdb.org/t/p/w500/jzPwsojjFStf5lR5Nm07w2hH56G.jpg"
+  },
+  {
+    "id": 119,
+    "title": "Man of Steel",
+    "type": "movie",
+    "year": 2013,
+    "rating": 6.7,
+    "genre": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ],
+    "description": "A young boy learns that he has extraordinary powers and is not of this earth. As a young man, he journeys to discover where he came from and what he was sent here to do. But the hero in him must emerge if he is to save the world from annihilation and become the symbol of hope for all mankind.",
+    "poster": "https://image.tmdb.org/t/p/w500/8GFtkImmK0K1VaUChR0n9O61CFU.jpg"
+  },
+  {
+    "id": 120,
+    "title": "Batman v Superman: Dawn of Justice",
+    "type": "movie",
+    "year": 2016,
+    "rating": 6,
+    "genre": [
+      "Action",
+      "Adventure",
+      "Fantasy"
+    ],
+    "description": "Fearing the actions of a god-like Super Hero left unchecked, Gotham City’s own formidable, forceful vigilante takes on Metropolis’s most revered, modern-day savior, while the world wrestles with what sort of hero it really needs. And with Batman and Superman at war with one another, a new threat quickly arises, putting mankind in greater danger than it’s ever known before.",
+    "poster": "https://image.tmdb.org/t/p/w500/5UsK3grJvtQrtzEgqNlDljJW96w.jpg"
+  },
+  {
+    "id": 121,
+    "title": "Wonder Woman",
+    "type": "movie",
+    "year": 2017,
+    "rating": 7.2,
+    "genre": [
+      "Action",
+      "Adventure",
+      "Fantasy"
+    ],
+    "description": "An Amazon princess comes to the world of Man in the grips of the First World War to confront the forces of evil and bring an end to human conflict.",
+    "poster": "https://image.tmdb.org/t/p/w500/v4ncgZjG2Zu8ZW5al1vIZTsSjqX.jpg"
+  },
+  {
+    "id": 122,
+    "title": "Fairy Tail",
+    "type": "anime",
+    "year": 2009,
+    "rating": 7.9,
+    "genre": [
+      "Animation",
+      "Action",
+      "Comedy",
+      "Sci-Fi"
+    ],
+    "description": "Lucy is a 17-year-old girl, who wants to be a full-fledged mage. One day when visiting Harujion Town, she meets Natsu, a young man who gets sick easily by any type of transportation. But Natsu isn't just any ordinary kid, he's a member of one of the world's most infamous mage guilds: Fairy Tail.",
+    "poster": "https://image.tmdb.org/t/p/w500/AsfCVSHnFnUnbepLucvIB1N30Il.jpg"
+  },
+  {
+    "id": 123,
+    "title": "Sword Art Online",
+    "type": "anime",
+    "year": 2012,
+    "rating": 8.2,
+    "genre": [
+      "Animation",
+      "Sci-Fi",
+      "Action"
+    ],
+    "description": "In the near future, a Virtual Reality Massive Multiplayer Online Role-Playing Game (VRMMORPG) called Sword Art Online has been released where players control their avatars with their bodies using a piece of technology called Nerve Gear. One day, players discover they cannot log out, as the game creator is holding them captive unless they reach the 100th floor of the game's tower and defeat the final boss. However, if they die in the game, they die in real life. Their struggle for survival starts now...",
+    "poster": "https://image.tmdb.org/t/p/w500/9m8bFIXPg26taNrFSXGwEORVACD.jpg"
+  },
+  {
+    "id": 124,
+    "title": "Haikyu!!",
+    "type": "anime",
+    "year": 2014,
+    "rating": 8.6,
+    "genre": [
+      "Animation",
+      "Comedy",
+      "Drama"
+    ],
+    "description": "Inspired by a small-statured pro volleyball player, Hinata creates a volleyball team in his last year of middle school. Unfortunately the team is matched up against the \"King of the Court\" Tobio Kageyama’s team in their first tournament and inevitably lose. After the crushing defeat, Hinata vows to surpass Kageyama After entering high school, Hinata joins the volleyball team only to find that Tobio has also joined.",
+    "poster": "https://image.tmdb.org/t/p/w500/8WEr48swcqe89Zsy5sdrGCASlIg.jpg"
+  },
+  {
+    "id": 125,
+    "title": "SPY x FAMILY",
+    "type": "anime",
+    "year": 2022,
+    "rating": 8.5,
+    "genre": [
+      "Animation",
+      "Action",
+      "Comedy"
+    ],
+    "description": "A spy, an assassin and a telepath come together to pose as a family, each for their own reasons, while hiding their true identities from each other.",
+    "poster": "https://image.tmdb.org/t/p/w500/7NAvPYPAu7MeHwP8E9sn81PqsRh.jpg"
+  },
+  {
+    "id": 126,
+    "title": "BLUE LOCK",
+    "type": "anime",
+    "year": 2022,
+    "rating": 8.3,
+    "genre": [
+      "Animation",
+      "Action",
+      "Drama"
+    ],
+    "description": "High school soccer players from across Japan gather for a controversial project designed to create the best — and most egoistic — striker in the world.",
+    "poster": "https://image.tmdb.org/t/p/w500/fcKH1NQzoTXiYO1OrhaFFwTKhBp.jpg"
+  },
+  {
+    "id": 127,
+    "title": "Mob Psycho 100",
+    "type": "anime",
+    "year": 2016,
+    "rating": 8.5,
+    "genre": [
+      "Animation",
+      "Action",
+      "Comedy",
+      "Sci-Fi"
+    ],
+    "description": "Shigeo Kageyama, a.k.a. \"Mob,\" is a boy who has trouble expressing himself, but who happens to be a powerful esper. Mob is determined to live a normal life and keeps his ESP suppressed, but when his emotions surge to a level of 100%, something terrible happens to him! As he's surrounded by false espers, evil spirits, and mysterious organizations, what will Mob think? What choices will he make?",
+    "poster": "https://image.tmdb.org/t/p/w500/vR7hwaGQ0ySRoq1WobiNRaPs4WO.jpg"
+  },
+  {
+    "id": 128,
+    "title": "Re:ZERO -Starting Life in Another World-",
+    "type": "anime",
+    "year": 2016,
+    "rating": 8.1,
+    "genre": [
+      "Animation",
+      "Mystery",
+      "Action",
+      "Sci-Fi"
+    ],
+    "description": "Natsuki Subaru, an ordinary high school  student, is on his way home from the convenience store when he finds  himself transported to another world. As he's lost and confused in a new  world where he doesn't even know left from right, the only person to  reach out to him was a beautiful girl with silver hair. Determined to  repay her somehow for saving him from his own despair, Subaru agrees to  help the girl find something she's looking for.",
+    "poster": "https://image.tmdb.org/t/p/w500/oHqYrPAsIiTD5m4DuxumV4er8BU.jpg"
+  },
+  {
+    "id": 129,
+    "title": "Dr. STONE",
+    "type": "anime",
+    "year": 2019,
+    "rating": 8.5,
+    "genre": [
+      "Animation",
+      "Action",
+      "Comedy",
+      "Sci-Fi"
+    ],
+    "description": "One fateful day, all of humanity was petrified by a blinding flash of light. After several millennia, high schooler Taiju awakens and finds himself lost in a world of statues. However, he’s not alone! His science-loving friend Senku’s been up and running for a few months and he's got a grand plan in mind—to kickstart civilization with the power of science!",
+    "poster": "https://image.tmdb.org/t/p/w500/xbZQ3fDl0y5mt0ARwfeyrgQ4JTw.jpg"
+  },
+  {
+    "id": 130,
+    "title": "Classroom of the Elite",
+    "type": "anime",
+    "year": 2017,
+    "rating": 8.4,
+    "genre": [
+      "Animation",
+      "Drama",
+      "Mystery"
+    ],
+    "description": "Kiyotaka Ayanokouji enrolls at the prestigious Tokyo Koudo Ikusei Academy, but is assigned to Class 1-D, where students with behavioral problems are housed. The school awards points equivalent to 100,000 yen per month and allows unusual freedom in classes, masking a more complex system.",
+    "poster": "https://image.tmdb.org/t/p/w500/yuHanbUUIv2UWRxxQFt9n8jtmOJ.jpg"
+  },
+  {
+    "id": 131,
+    "title": "Tokyo Revengers",
+    "type": "anime",
+    "year": 2021,
+    "rating": 8.4,
+    "genre": [
+      "Animation",
+      "Action",
+      "Crime",
+      "Drama"
+    ],
+    "description": "Takemichi Hanagaki is a freelancer that’s reached the absolute pits of despair in his life. He finds out that the only girlfriend he ever had, in middle school, Hinata Tachibana, had been killed by the ruthless Tokyo Manji Gang. The day after hearing about her death, he’s standing on the station platform and ends up being pushed over onto the tracks by a herd of people. He closes his eyes thinking he’s about to die, but when he opens his eyes back up, he somehow had gone back in time 12 years. Now that he’s back living the best days of his life, Takemichi decides to get revenge on his life.",
+    "poster": "https://image.tmdb.org/t/p/w500/arB3L9pZZBSzUPSC8BEv8c3X0bF.jpg"
+  },
+  {
+    "id": 132,
+    "title": "The Seven Deadly Sins: Four Knights of the Apocalypse",
+    "type": "anime",
+    "year": 2023,
+    "rating": 8.1,
+    "genre": [
+      "Animation",
+      "Action",
+      "Sci-Fi"
+    ],
+    "description": "As a prophecy of doom unfolds on the peaceful land of Britannia, a purehearted boy sets out on a journey of discovery — and revenge.",
+    "poster": "https://image.tmdb.org/t/p/w500/6SWVJvCIC9B16u6wASZ8FEaNssz.jpg"
+  },
+  {
+    "id": 133,
+    "title": "Assassination Classroom",
+    "type": "anime",
+    "year": 2015,
+    "rating": 8.4,
+    "genre": [
+      "Animation",
+      "Comedy",
+      "Action",
+      "Sci-Fi"
+    ],
+    "description": "The students of Class 3-E have a mission: kill their teacher before graduation. He has already destroyed the moon, and has promised to destroy the Earth if he can not be killed within a year. But how can this class of misfits kill a tentacled monster, capable of reaching Mach 20 speed, who may be the best teacher any of them have ever had?",
+    "poster": "https://image.tmdb.org/t/p/w500/qf0l0nQ2t06Es3cSXflqx6l6vsJ.jpg"
+  },
+  {
+    "id": 134,
+    "title": "The Promised Neverland",
+    "type": "anime",
+    "year": 2019,
+    "rating": 8.3,
+    "genre": [
+      "Animation",
+      "Drama",
+      "Mystery",
+      "Sci-Fi"
+    ],
+    "description": "Emma, Norman and Ray are the brightest kids at the Grace Field House orphanage. And under the care of the woman they refer to as “Mom,” all the kids have enjoyed a comfortable life. Good food, clean clothes and the perfect environment to learn—what more could an orphan ask for? One day, though, Emma and Norman uncover the dark truth of the outside world they are forbidden from seeing.",
+    "poster": "https://image.tmdb.org/t/p/w500/oBgRCpAbtMpk1v8wfdsIph7lPQE.jpg"
+  },
+  {
+    "id": 135,
+    "title": "Noragami",
+    "type": "anime",
+    "year": 2014,
+    "rating": 8.2,
+    "genre": [
+      "Animation",
+      "Action",
+      "Sci-Fi"
+    ],
+    "description": "Yato may just be a minor god now, but he’s determined to make it big and he’s got a plan. Unfortunately, things just don’t seem to be going his way. He doesn’t have a single shrine dedicated to him, his partner has just quit, and now he’s got to find a new divine weapon. Just when things look bleak, he meets a girl named Hiyori and changes her life forever.",
+    "poster": "https://image.tmdb.org/t/p/w500/7pL2wGmy92v31ceYvCVIg4ilwLr.jpg"
+  },
+  {
+    "id": 136,
+    "title": "Kuroko's Basketball",
+    "type": "anime",
+    "year": 2012,
+    "rating": 8.4,
+    "genre": [
+      "Animation",
+      "Comedy",
+      "Drama"
+    ],
+    "description": "In the story, Kagami Taiga has just enrolled into Seirin High School when he meets Kuroko Tetsuya of the school's basketball team. Kuroko happens to be the shadowy sixth member of the legendary Generation of Miracles basketball team. Together, Kagami and Kuroko aim to take their team to the inter-high school championship - against Kuroko's former teammates.",
+    "poster": "https://image.tmdb.org/t/p/w500/qi8dlAgQEeahpEn1AOb5BJEOcVB.jpg"
+  },
+  {
+    "id": 137,
+    "title": "Food Wars! Shokugeki no Soma",
+    "type": "anime",
+    "year": 2015,
+    "rating": 8.4,
+    "genre": [
+      "Animation",
+      "Comedy",
+      "Drama"
+    ],
+    "description": "Young chef Soma enters the prestigious Totsuki Culinary Academy, where he must emerge victorious in over-the-top cooking battles or face expulsion.",
+    "poster": "https://image.tmdb.org/t/p/w500/eAQHqcJXP0FBzXvQkIV5g5ZueZb.jpg"
+  },
+  {
+    "id": 138,
+    "title": "Cowboy Bebop",
+    "type": "anime",
+    "year": 1998,
+    "rating": 8.5,
+    "genre": [
+      "Animation",
+      "Action",
+      "Sci-Fi",
+      "Western"
+    ],
+    "description": "In 2071, roughly fifty years after an accident with a hyperspace gateway made the Earth almost uninhabitable, humanity has colonized most of the rocky planets and moons of the Solar System. Amid a rising crime rate, the Inter Solar System Police (ISSP) set up a legalized contract system, in which registered bounty hunters, also referred to as \"Cowboys\", chase criminals and bring them in alive in return for a reward.",
+    "poster": "https://image.tmdb.org/t/p/w500/xDiXDfZwC6XYC6fxHI1jl3A3Ill.jpg"
+  },
+  {
+    "id": 139,
+    "title": "Monster",
+    "type": "anime",
+    "year": 2004,
+    "rating": 8.5,
+    "genre": [
+      "Animation",
+      "Drama",
+      "Mystery",
+      "Crime"
+    ],
+    "description": "Kenzou Tenma, a Japanese brain surgeon in Germany, finds his life in utter turmoil after getting involved with a psychopath that was once a former patient.",
+    "poster": "https://image.tmdb.org/t/p/w500/n5XNKXnoXpoXyfiCtXHOf8q8PFM.jpg"
+  },
+  {
+    "id": 140,
+    "title": "Berserk",
+    "type": "anime",
+    "year": 1997,
+    "rating": 8.5,
+    "genre": [
+      "Action",
+      "Sci-Fi",
+      "Animation"
+    ],
+    "description": "Guts, a wandering mercenary, joins the Band of the Hawk after being defeated in a duel by Griffith, the group's leader and founder. Together, they dominate every battle, but something menacing lurks in the shadows.",
+    "poster": "https://image.tmdb.org/t/p/w500/xctRBSZzvoHDHz38ZZUGxRYetvG.jpg"
+  },
+  {
+    "id": 141,
+    "title": "Frieren: Beyond Journey's End",
+    "type": "anime",
+    "year": 2023,
+    "rating": 8.8,
+    "genre": [
+      "Animation",
+      "Action",
+      "Drama",
+      "Sci-Fi"
+    ],
+    "description": "After the party of heroes defeated the Demon King, they restored peace to the land and returned to lives of solitude.  Generations pass, and the elven mage Frieren comes face to face with humanity’s mortality. She takes on a new apprentice and promises to fulfill old friends’ dying wishes. Can an elven mind make peace with the nature of life and death? Frieren embarks on her quest to find out.",
+    "poster": "https://image.tmdb.org/t/p/w500/cHhJzdUGcEBq6av4wr9jsIvUITH.jpg"
+  },
+  {
+    "id": 142,
+    "title": "【OSHI NO KO】",
+    "type": "anime",
+    "year": 2023,
+    "rating": 8.3,
+    "genre": [
+      "Animation",
+      "Drama"
+    ],
+    "description": "A small-town doctor gets sucked into the ruthless world of show business when he crosses paths with a popular teen idol who holds a secret.",
+    "poster": "https://image.tmdb.org/t/p/w500/qoW507a8RoGbpILCxt2N87USn8H.jpg"
+  },
+  {
+    "id": 143,
+    "title": "The Apothecary Diaries",
+    "type": "anime",
+    "year": 2023,
+    "rating": 8.6,
+    "genre": [
+      "Animation",
+      "Drama",
+      "Mystery"
+    ],
+    "description": "Maomao lived a peaceful life with her apothecary father. Until one day, she's sold as a lowly servant to the emperor's palace. But she wasn't meant for a compliant life among royalty. So when imperial heirs fall ill, she decides to step in and find a cure! This catches the eye of Jinshi, a handsome palace official who promotes her. Now, she's making a name for herself solving medical mysteries!",
+    "poster": "https://image.tmdb.org/t/p/w500/e3ojpANrFnmJCyeBNTinYwyBCIN.jpg"
+  },
+  {
+    "id": 144,
+    "title": "Kaiju No. 8",
+    "type": "anime",
+    "year": 2024,
+    "rating": 8.4,
+    "genre": [
+      "Animation",
+      "Action",
+      "Sci-Fi"
+    ],
+    "description": "In a world plagued by creatures known as Kaiju, Kafka Hibino aspired to enlist in The Defense Force. He makes a promise to enlist with his childhood friend, Mina Ashiro. Soon, life takes them in separate ways. While employed cleaning up after Kaiju battles, Kafka meets Reno Ichikawa. Reno's determination to join The Defense Force reawakens Kafka's promise to join Mina and protect humanity.",
+    "poster": "https://image.tmdb.org/t/p/w500/bJxGs0w5RAhaX4fIUQu511rvm0S.jpg"
+  },
+  {
+    "id": 145,
+    "title": "Delicious in Dungeon",
+    "type": "anime",
+    "year": 2024,
+    "rating": 8.4,
+    "genre": [
+      "Animation",
+      "Comedy",
+      "Action",
+      "Sci-Fi"
+    ],
+    "description": "Dungeons, dragons... and delicious monster stew!? Adventurers foray into a cursed buried kingdom to save their friend, cooking up a storm along the way.",
+    "poster": "https://image.tmdb.org/t/p/w500/9t3DYdGxK3i4WRzKvIZwJd4kBnr.jpg"
+  },
+  {
+    "id": 146,
+    "title": "Dan Da Dan",
+    "type": "anime",
+    "year": 2024,
+    "rating": 8.5,
+    "genre": [
+      "Animation",
+      "Action",
+      "Comedy",
+      "Sci-Fi"
+    ],
+    "description": "In a bet to prove whether ghosts or aliens exist, two high schoolers face terrifying paranormal threats, gain superpowers and maybe even fall in love?!",
+    "poster": "https://image.tmdb.org/t/p/w500/6qfZAOEUFIrbUH3JvePclx1nXzz.jpg"
+  },
+  {
+    "id": 147,
+    "title": "Made in Abyss",
+    "type": "anime",
+    "year": 2017,
+    "rating": 8.3,
+    "genre": [
+      "Animation",
+      "Drama",
+      "Action",
+      "Sci-Fi"
+    ],
+    "description": "Located in the center of a remote island, the Abyss is the last unexplored region, a huge and treacherous fathomless hole inhabited by strange creatures where only the bravest adventurers descend in search of ancient relics. In the upper levels of the Abyss, Riko, a girl who dreams of becoming an explorer, stumbles upon a mysterious little boy.",
+    "poster": "https://image.tmdb.org/t/p/w500/n30CBH4BoN5Z34tCpOWIPGJYOaS.jpg"
+  },
+  {
+    "id": 148,
+    "title": "Hell's Paradise",
+    "type": "anime",
+    "year": 2023,
+    "rating": 8.2,
+    "genre": [
+      "Animation",
+      "Action",
+      "Sci-Fi"
+    ],
+    "description": "For a chance at a pardon, a ninja assassin joins other condemned criminals on a journey to a mysterious island to retrieve an elixir of immortality.",
+    "poster": "https://image.tmdb.org/t/p/w500/1V9I7SvZbYoMbSvdtnlkkq9SB1k.jpg"
+  },
+  {
+    "id": 149,
+    "title": "Zom 100: Bucket List of the Dead",
+    "type": "anime",
+    "year": 2023,
+    "rating": 7.5,
+    "genre": [
+      "Animation",
+      "Action",
+      "Comedy",
+      "Sci-Fi"
+    ],
+    "description": "An overworked 24-year-old finally decides to live a little and create a bucket list, when a zombie outbreak hits the country.",
+    "poster": "https://image.tmdb.org/t/p/w500/XzOeAppGpnsSAiK82idkg0BoCt.jpg"
+  },
+  {
+    "id": 150,
+    "title": "Solo Leveling",
+    "type": "anime",
+    "year": 2024,
+    "rating": 8.7,
+    "genre": [
+      "Animation",
+      "Action",
+      "Sci-Fi"
+    ],
+    "description": "They say whatever doesn’t kill you makes you stronger, but that’s not the case for the world’s weakest hunter Sung Jinwoo. After being brutally slaughtered by monsters in a high-ranking dungeon, Jinwoo came back with the System, a program only he could see, that’s leveling him up in every way. Now, he’s inspired to discover the secrets behind his powers and the dungeon that spawned them.",
+    "poster": "https://image.tmdb.org/t/p/w500/geCRueV3ElhRTr0xtJuEWJt6dJ1.jpg"
+  },
+  {
+    "id": 151,
+    "title": "WIND BREAKER",
+    "type": "anime",
+    "year": 2024,
+    "rating": 8.1,
+    "genre": [
+      "Animation",
+      "Action"
+    ],
+    "description": "Furin High School's delinquents get bad grades, but they excel at protecting their town. Then a victory-obsessed newcomer threatens the balance of power.",
+    "poster": "https://image.tmdb.org/t/p/w500/h9IHHVR6piicaaWOgNLSsvRSC3r.jpg"
+  },
+  {
+    "id": 152,
+    "title": "The Dangers in My Heart",
+    "type": "anime",
+    "year": 2023,
+    "rating": 8.6,
+    "genre": [
+      "Animation",
+      "Comedy"
+    ],
+    "description": "Kyotaro Ichikawa, a boy barely clinging to the bottom rung of his school's social ladder, secretly believes he’s the tortured lead in some psychological thriller. He spends his days dreaming up ways to disrupt his classmates' peaceful lives and pining after Anna Yamada, the class idol. But Kyotaro's not nearly the troubled teen he pretends to be…and it turns out Anna's a bit odd herself!",
+    "poster": "https://image.tmdb.org/t/p/w500/bC8Bx0VHLZzvPCXzuDnvTIbzVIU.jpg"
+  },
+  {
+    "id": 153,
+    "title": "Fire Force",
+    "type": "anime",
+    "year": 2019,
+    "rating": 8.3,
+    "genre": [
+      "Animation",
+      "Action",
+      "Sci-Fi",
+      "Comedy"
+    ],
+    "description": "Year 198 of the Solar Era in Tokyo, special fire brigades are fighting against a phenomenon called spontaneous human combustion where humans beings are turned into living infernos called \"Infernals\". While the Infernals are first generation cases of spontaneous human combustion, later generations possess the ability to manipulate flames while retaining human form. Shinra Kusakabe, a youth who gained the nickname Devil's Footprints for his ability to ignite his feet at will, joins the Special Fire Force Company 8 which composes of other flames users as they work to extinguish any Infernals they encounter. As a faction that is creating Infernals appears, Shira begins to uncover the truth behind a mysterious fire that caused the death of his family twelve years ago.",
+    "poster": "https://image.tmdb.org/t/p/w500/96jrp8XIEPKC7xHhbkpWLD15oYW.jpg"
+  }
 ]
