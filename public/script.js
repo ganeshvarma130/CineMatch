@@ -1826,15 +1826,26 @@ const GENRES=["All","Action","Sci-Fi","Drama","Thriller","Horror","Romance","Com
 let page="home";
 let favorites=JSON.parse(localStorage.getItem("cinematchFavorites")||"[]");
 let profile=JSON.parse(localStorage.getItem("cinematchProfile")||'{"name":"","email":"","phone":""}');
+let ratings=JSON.parse(localStorage.getItem("cinematchRatings")||"{}");
 let currentGenre="All",currentSort="rating",currentSearch="";
 
 function initials(name){return name?name.split(" ").map(x=>x[0]).join("").toUpperCase().slice(0,2):"?";}
 function fav(m){return favorites.some(x=>x.id===m.id);}
-function toggleFav(m){
-  favorites=fav(m)?favorites.filter(x=>x.id!==m.id):[...favorites,m];
+async function toggleFav(m){
+  const wasFavorite=fav(m);
+  favorites=wasFavorite?favorites.filter(x=>x.id!==m.id):[...favorites,m];
   localStorage.setItem("cinematchFavorites",JSON.stringify(favorites));
   render();
-  showToast(fav(m)?`${m.title} saved to your library`:`${m.title} removed from your library`);
+  showToast(wasFavorite?`${m.title} removed from your library`:`${m.title} saved to your library`);
+  if(window.API){
+    try{await API.user.toggleFavorite(m);}
+    catch(error){
+      favorites=wasFavorite?[...favorites,m]:favorites.filter(x=>x.id!==m.id);
+      localStorage.setItem("cinematchFavorites",JSON.stringify(favorites));
+      render();
+      showToast("Could not sync favorites with the server");
+    }
+  }
 }
 function showToast(message){
   const root=document.getElementById("toastRoot");
@@ -1842,6 +1853,31 @@ function showToast(message){
   root.innerHTML=`<div class="toast">${message}</div>`;
   clearTimeout(window.__cinematchToast);
   window.__cinematchToast=setTimeout(()=>{root.innerHTML="";},2400);
+}
+async function hydrateBackend(){
+  if(!window.API)return;
+  try{
+    const [user,favoriteData,ratingData]=await Promise.all([API.user.get(),API.user.getFavorites(),API.user.getRatings()]);
+    profile=user.profile||profile;
+    favorites=favoriteData.favorites||[];
+    ratings=ratingData.ratings||{};
+    localStorage.setItem("cinematchFavorites",JSON.stringify(favorites));
+    localStorage.setItem("cinematchProfile",JSON.stringify(profile));
+    localStorage.setItem("cinematchRatings",JSON.stringify(ratings));
+    render();
+  }catch(error){
+    console.warn("CineMatch backend sync unavailable:",error.message);
+    showToast("Offline mode — changes are saved locally");
+  }
+}
+async function persistProfile(){
+  profile={name:document.getElementById("nameInput").value,email:document.getElementById("emailInput").value,phone:document.getElementById("phoneInput").value};
+  localStorage.setItem("cinematchProfile",JSON.stringify(profile));
+  if(window.API){
+    try{await API.user.saveProfile(profile);showToast("Profile synced successfully");}
+    catch(error){showToast("Profile saved locally; server sync failed");}
+  }else showToast("Profile saved");
+  render();
 }
 function similar(movie,count=8){
   return MOVIE_DB.filter(m=>m.id!==movie.id).map(m=>({...m,score:m.genre.filter(g=>movie.genre.includes(g)).length*2+(m.type===movie.type?1:0)+(Math.abs(m.year-movie.year)<5?.5:0)}))
@@ -2036,7 +2072,7 @@ document.querySelectorAll("#modalRoot [data-open]").forEach(x=>x.onclick=()=>ope
 
 const stars = document.querySelectorAll('.rating-stars span');
 const ratingValue = document.querySelector('.rating-value');
-const savedRating = localStorage.getItem(`rating_${m.id}`);
+const savedRating = ratings[m.id] || localStorage.getItem(`rating_${m.id}`);
 
 if (savedRating) {
     stars.forEach((s, i) => {
@@ -2059,7 +2095,10 @@ stars.forEach((star, index) => {
 
         ratingValue.textContent = `You rated: ${rating}/5`;
 
+        ratings[m.id]=rating;
         localStorage.setItem(`rating_${m.id}`, rating);
+        localStorage.setItem("cinematchRatings",JSON.stringify(ratings));
+        if(window.API)API.user.setRating(m.id,rating).catch(()=>showToast("Rating saved locally; server sync failed"));
     });
 });
 
@@ -2078,7 +2117,10 @@ if (changeRating) {
         ratingValue.textContent = '';
 
         // Remove the saved rating for this movie
+        delete ratings[m.id];
         localStorage.removeItem(`rating_${m.id}`);
+        localStorage.setItem("cinematchRatings",JSON.stringify(ratings));
+        if(window.API)API.user.removeRating(m.id).catch(()=>showToast("Rating removal could not sync"));
     });
 }
 }
@@ -2146,8 +2188,10 @@ let ps=document.getElementById("pageSearch");if(ps)ps.oninput=e=>{currentSearch=
 let ss=document.getElementById("sortSelect");if(ss)ss.onchange=e=>{currentSort=e.target.value;updateList();};
 let save=document.getElementById("saveProfile");if(save)save.onclick=()=>{profile={name:document.getElementById("nameInput").value,email:document.getElementById("emailInput").value,phone:document.getElementById("phoneInput").value};localStorage.setItem("cinematchProfile",JSON.stringify(profile));render();alert("✅ Profile saved!");};
 let discard=document.getElementById("discardProfile");if(discard)discard.onclick=()=>render();
+if(save)save.onclick=persistProfile;
 }
 document.addEventListener("keydown",e=>{
   if(e.key==="Escape")document.getElementById("modalRoot").innerHTML="";
 });
 render();
+hydrateBackend();
