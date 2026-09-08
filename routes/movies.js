@@ -1,155 +1,139 @@
-// ─────────────────────────────────────────────
-//  routes/movies.js
-//  Base path: /api/movies
-//
-//  GET  /                   → all movies (filter/sort via query)
-//  GET  /search?q=          → search by title or genre
-//  GET  /genres             → list every unique genre
-//  GET  /top-rated          → top N by rating
-//  GET  /type/:type         → movies OR anime
-//  GET  /:id                → single movie by id
-//  GET  /:id/similar        → similar movies (genre-overlap score)
-// ─────────────────────────────────────────────
 const router = require("express").Router();
 const { readDB } = require("../data/db");
 
-// ── helpers ──────────────────────────────────
+const TYPES = new Set(["movie", "anime"]);
+const SORTS = new Set(["rating", "year", "title"]);
 
-/** Score how similar two movies are (same algorithm as your frontend). */
-function similarityScore(a, b) {
-  const genreOverlap = b.genre.filter(g => a.genre.includes(g)).length * 2;
-  const sameType     = a.type === b.type ? 1 : 0;
-  const closeYear    = Math.abs(a.year - b.year) < 5 ? 0.5 : 0;
-  return genreOverlap + sameType + closeYear;
+function numberParam(value, fallback, { min = 0, max = 100 } = {}) {
+  const parsed = Number.parseInt(value, 10);
+  if (!Number.isFinite(parsed)) return fallback;
+  return Math.min(max, Math.max(min, parsed));
 }
 
-/** Parse an integer query param with a default. */
-function intParam(val, def) {
-  const n = parseInt(val, 10);
-  return isNaN(n) ? def : n;
+function clean(value, max = 80) {
+  return String(value || "").trim().slice(0, max);
 }
 
-// ── GET /api/movies ───────────────────────────
-// Query params:
-//   type   = movie | anime
-//   genre  = Action | Sci-Fi | ...
-//   sort   = rating | year | title
-//   order  = asc | desc      (default desc for rating/year, asc for title)
-//   limit  = number          (default: all)
-//   page   = number          (default: 1, works with limit)
-router.get("/", (req, res) => {
+function findMovies(query = {}) {
   let movies = readDB("movies");
+  const type = clean(query.type).toLowerCase();
+  const genre = clean(query.genre).toLowerCase();
+  const q = clean(query.q, 100).toLowerCase();
 
-  // — filter —
-  if (req.query.type)  movies = movies.filter(m => m.type  === req.query.type);
-  if (req.query.genre) movies = movies.filter(m => m.genre.includes(req.query.genre));
+  if (type) movies = movies.filter(movie => movie.type === type);
+  if (genre) movies = movies.filter(movie => movie.genre.some(item => item.toLowerCase() === genre));
+  if (q) movies = movies.filter(movie => [movie.title, movie.description, ...movie.genre]
+    .some(value => String(value).toLowerCase().includes(q)));
+  return movies;
+}
 
-  // — sort —
-  const sort  = req.query.sort  || "rating";
-  const order = req.query.order || (sort === "title" ? "asc" : "desc");
-
-  movies.sort((a, b) => {
-    let cmp = 0;
-    if (sort === "rating") cmp = a.rating - b.rating;
-    else if (sort === "year") cmp = a.year - b.year;
-    else if (sort === "title") cmp = a.title.localeCompare(b.title);
-    return order === "asc" ? cmp : -cmp;
+function sortMovies(movies, sort = "rating", order) {
+  const safeSort = SORTS.has(sort) ? sort : "rating";
+  const safeOrder = order === "asc" || order === "desc"
+    ? order
+    : safeSort === "title" ? "asc" : "desc";
+  return [...movies].sort((a, b) => {
+    const left = safeSort === "title" ? a.title.localeCompare(b.title) : (a[safeSort] || 0) - (b[safeSort] || 0);
+    return safeOrder === "asc" ? left : -left;
   });
+}
 
-  // — paginate —
-  const limit = intParam(req.query.limit, 0);   // 0 = no limit
-  const page  = intParam(req.query.page,  1);
+function similarityScore(target, candidate) {
+  const overlap = candidate.genre.filter(genre => target.genre.includes(genre)).length * 2;
+  const sameType = target.type === candidate.type ? 1 : 0;
+  const closeYear = Math.abs(target.year - candidate.year) <= 5 ? 0.5 : 0;
+  return overlap + sameType + closeYear;
+}
 
-  const total = movies.length;
-  if (limit > 0) {
-    const start = (page - 1) * limit;
-    movies = movies.slice(start, start + limit);
-  }
+function pageResult(items, page, limit) {
+  const total = items.length;
+  if (!limit) return { total, page: 1, pages: 1, count: total, movies: items };
+  const pages = Math.max(1, Math.ceil(total / limit));
+  const safePage = Math.min(page, pages);
+  const start = (safePage - 1) * limit;
+  return { total, page: safePage, pages, count: Math.min(limit, Math.max(0, total - start)), movies: items.slice(start, start + limit) };
+}
 
-  res.json({
-    total,
-    page   : limit > 0 ? page  : 1,
-    pages  : limit > 0 ? Math.ceil(total / limit) : 1,
-    count  : movies.length,
-    movies,
-  });
+router.get("/", (req, res) => {
+  const type = clean(req.query.type).toLowerCase();
+  if (type && !TYPES.has(type)) return res.status(400).json({ error: "Type must be 'movie' or 'anime'." });
+  const sort = clean(req.query.sort).toLowerCase() || "rating";
+  if (!SORTS.has(sort)) return res.status(400).json({ error: "Sort must be 'rating', 'year', or 'title'." });
+  const movies = sortMovies(findMovies(req.query), sort, clean(req.query.order).toLowerCase() || undefined);
+  const limit = numberParam(req.query.limit, 0, { min: 0, max: 100 });
+  const page = numberParam(req.query.page, 1, { min: 1, max: 100000 });
+  res.json(pageResult(movies, page, limit));
 });
 
-// ── GET /api/movies/search ────────────────────
-// Query params: q (required)
 router.get("/search", (req, res) => {
-  const q = (req.query.q || "").toLowerCase().trim();
-  if (!q) return res.status(400).json({ error: "Query param 'q' is required." });
-
-  const movies = readDB("movies");
-  const results = movies.filter(m =>
-    m.title.toLowerCase().includes(q) ||
-    m.genre.some(g => g.toLowerCase().includes(q)) ||
-    m.description.toLowerCase().includes(q)
-  );
-
-  res.json({ query: q, count: results.length, movies: results });
+  const query = clean(req.query.q, 100);
+  if (!query) return res.status(400).json({ error: "Query param 'q' is required." });
+  const movies = sortMovies(findMovies({ q: query }), "rating", "desc");
+  res.json({ query, count: movies.length, movies });
 });
 
-// ── GET /api/movies/genres ────────────────────
 router.get("/genres", (req, res) => {
   const movies = readDB("movies");
-  const genres = [...new Set(movies.flatMap(m => m.genre))].sort();
-  res.json({ genres });
+  const counts = movies.flatMap(movie => movie.genre).reduce((result, genre) => {
+    result[genre] = (result[genre] || 0) + 1;
+    return result;
+  }, {});
+  const genres = Object.keys(counts).sort((a, b) => a.localeCompare(b));
+  res.json({ count: genres.length, genres, counts });
 });
 
-// ── GET /api/movies/top-rated ─────────────────
-// Query params: limit (default 10), type (optional)
+router.get("/stats", (req, res) => {
+  const movies = readDB("movies");
+  const byType = movies.reduce((result, movie) => {
+    result[movie.type] = (result[movie.type] || 0) + 1;
+    return result;
+  }, {});
+  res.json({ total: movies.length, byType, averageRating: Number((movies.reduce((sum, movie) => sum + Number(movie.rating || 0), 0) / Math.max(1, movies.length)).toFixed(2)) });
+});
+
 router.get("/top-rated", (req, res) => {
-  let movies = readDB("movies");
-  if (req.query.type) movies = movies.filter(m => m.type === req.query.type);
-
-  const limit = intParam(req.query.limit, 10);
-  movies = movies
-    .filter(m => m.rating > 0)
-    .sort((a, b) => b.rating - a.rating)
-    .slice(0, limit);
-
+  const type = clean(req.query.type).toLowerCase();
+  if (type && !TYPES.has(type)) return res.status(400).json({ error: "Type must be 'movie' or 'anime'." });
+  const limit = numberParam(req.query.limit, 10, { min: 1, max: 100 });
+  const movies = sortMovies(findMovies({ type }), "rating", "desc").filter(movie => Number(movie.rating) > 0).slice(0, limit);
   res.json({ count: movies.length, movies });
 });
 
-// ── GET /api/movies/type/:type ────────────────
+router.get("/discover", (req, res) => {
+  const type = clean(req.query.type).toLowerCase();
+  if (type && !TYPES.has(type)) return res.status(400).json({ error: "Type must be 'movie' or 'anime'." });
+  const limit = numberParam(req.query.limit, 12, { min: 1, max: 100 });
+  const movies = sortMovies(findMovies({ type }), "year", "desc").slice(0, limit);
+  res.json({ count: movies.length, movies });
+});
+
 router.get("/type/:type", (req, res) => {
-  const { type } = req.params;
-  if (!["movie", "anime"].includes(type)) {
-    return res.status(400).json({ error: "Type must be 'movie' or 'anime'." });
-  }
-  const movies = readDB("movies").filter(m => m.type === type);
+  const type = clean(req.params.type).toLowerCase();
+  if (!TYPES.has(type)) return res.status(400).json({ error: "Type must be 'movie' or 'anime'." });
+  const movies = sortMovies(findMovies({ type }), "rating", "desc");
   res.json({ type, count: movies.length, movies });
 });
 
-// ── GET /api/movies/:id ───────────────────────
-router.get("/:id", (req, res) => {
-  const id     = parseInt(req.params.id, 10);
+router.get("/:id/similar", (req, res) => {
+  const id = Number.parseInt(req.params.id, 10);
+  if (!Number.isInteger(id)) return res.status(400).json({ error: "Movie id must be an integer." });
   const movies = readDB("movies");
-  const movie  = movies.find(m => m.id === id);
-  if (!movie) return res.status(404).json({ error: `Movie with id ${id} not found.` });
-  res.json(movie);
+  const target = movies.find(movie => movie.id === id);
+  if (!target) return res.status(404).json({ error: `Movie with id ${id} not found.` });
+  const limit = numberParam(req.query.limit, 8, { min: 1, max: 50 });
+  const similar = movies.filter(movie => movie.id !== id)
+    .map(movie => ({ movie, score: similarityScore(target, movie) }))
+    .sort((a, b) => b.score - a.score || b.movie.rating - a.movie.rating)
+    .slice(0, limit).map(({ movie }) => movie);
+  res.json({ basedOn: target.title, count: similar.length, movies: similar });
 });
 
-// ── GET /api/movies/:id/similar ──────────────
-// Query params: limit (default 8)
-router.get("/:id/similar", (req, res) => {
-  const id     = parseInt(req.params.id, 10);
-  const movies = readDB("movies");
-  const target = movies.find(m => m.id === id);
-  if (!target) return res.status(404).json({ error: `Movie with id ${id} not found.` });
-
-  const limit = intParam(req.query.limit, 8);
-
-  const similar = movies
-    .filter(m => m.id !== id)
-    .map(m => ({ ...m, _score: similarityScore(target, m) }))
-    .sort((a, b) => b._score - a._score || b.rating - a.rating)
-    .slice(0, limit)
-    .map(({ _score, ...m }) => m);   // strip internal score field
-
-  res.json({ basedOn: target.title, count: similar.length, movies: similar });
+router.get("/:id", (req, res) => {
+  const id = Number.parseInt(req.params.id, 10);
+  if (!Number.isInteger(id)) return res.status(400).json({ error: "Movie id must be an integer." });
+  const movie = readDB("movies").find(item => item.id === id);
+  if (!movie) return res.status(404).json({ error: `Movie with id ${id} not found.` });
+  res.json(movie);
 });
 
 module.exports = router;
