@@ -1,48 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CineMatch</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0d12">
+  <title>CineMatch — Find your next obsession</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="app">
-<nav class="sidebar">
-  <div class="sidebar-logo"><div class="logo-text">CineMatch</div><div class="logo-sub">Designed by <br> Ganesh Varma
-  </div></div>
-  <div class="nav-links">
-    <div class="nav-item active" data-page="home"><span class="nav-icon">🏠</span>Home</div>
-    <div class="nav-item" data-page="movies"><span class="nav-icon">🎬</span>Movies</div>
-    <div class="nav-item" data-page="anime"><span class="nav-icon">⚡</span>Anime</div>
-    <div class="nav-item" data-page="favorites"><span class="nav-icon">❤️</span>Favorites <span class="nav-badge" id="favBadge" style="display:none">0</span></div>
-    <div class="nav-item" data-page="profile"><span class="nav-icon">👤</span>Profile</div>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Primary navigation">
+      <div class="brand-lockup">
+        <a class="brand" href="#" aria-label="CineMatch home" data-page="home">
+          <span class="brand-mark">C</span>
+          <span><strong>CineMatch</strong><small>watch better</small></span>
+        </a>
+        <span class="brand-pulse" aria-hidden="true"></span>
+      </div>
+      <div class="nav-label">Browse</div>
+      <nav class="nav-links">
+        <button class="nav-item active" data-page="home"><span class="nav-icon">⌂</span><span>Home</span></button>
+        <button class="nav-item" data-page="movies"><span class="nav-icon">▣</span><span>Movies</span></button>
+        <button class="nav-item" data-page="anime"><span class="nav-icon">✦</span><span>Anime</span></button>
+        <button class="nav-item" data-page="favorites"><span class="nav-icon">♡</span><span>Favorites</span><span class="nav-badge" id="favBadge" hidden>0</span></button>
+      </nav>
+      <div class="sidebar-spacer"></div>
+      <div class="nav-label">Your space</div>
+      <button class="nav-item" data-page="profile"><span class="nav-icon">◉</span><span>Profile</span></button>
+      <div class="sidebar-footer"><span class="status-dot"></span><span>Personal library</span></div>
+    </aside>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open navigation">☰</button>
+        <div class="topbar-title" id="topbarTitle">Home</div>
+        <div class="topbar-right">
+          <span class="topbar-hint">Your next favorite is out there.</span>
+          <button class="avatar" id="topAvatar" aria-label="Open profile">?</button>
+        </div>
+      </header>
+      <div id="appContent"></div>
+    </main>
   </div>
-  <div class="sidebar-bottom">gvarma1304@gmail.com</div>
-</nav>
-<div class="sidebar-overlay" id="sidebarOverlay"></div>
-<main class="main">
-
-  <div class="topbar">
-
-  <button class="mobile-menu-btn" id="mobileMenuBtn">
-    ☰
-  </button>
-
-  <div class="topbar-title" id="topbarTitle">
-    🏠 Home
-  </div>
-
-  <div class="topbar-right">
-    <div class="avatar" id="topAvatar">?</div>
-  </div>
-
-</div>
-  <div id="appContent"></div>
-</main>
-</div>
-<div id="modalRoot"></div>
-<script src="api.js"></script>
-<script src="script.js"></script>
+  <div id="modalRoot"></div>
+  <div id="toastRoot" aria-live="polite"></div>
+  <script src="script.js"></script>
 </body>
 </html>
